@@ -40,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack 4 Starter',
+      title: 'pixelbricks-agency',
       template: './src/index.html',
       inject: true,
       minify: {
@@ -51,9 +51,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.css'
     }),
-    // new CopyWebpackPlugin([{
-    //   from:'./src/assets/images',
-    //   to:'assets/images'
-    // }])
+    new CopyWebpackPlugin([{
+      from:'./src/assets/images',
+      to:'assets/images'
+    }])
   ]
 };

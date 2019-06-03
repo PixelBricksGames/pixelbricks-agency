@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import '../styles/Statusbar.scss';
+import "../styles/Statusbar.scss";
 
 class Statusbar extends Component {
     render() {

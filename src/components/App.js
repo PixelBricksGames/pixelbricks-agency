@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import MenuBar from "./MenuBar";
 
-import '../styles/App.scss';
+import "../styles/App.scss";
 
 class App extends Component {
     render() {

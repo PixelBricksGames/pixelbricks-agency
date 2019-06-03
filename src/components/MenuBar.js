@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import '../styles/MenuBar.scss';
+import "../styles/MenuBar.scss";
 
 class MenuBar extends Component {
     render() {

@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -28,10 +28,22 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/images'
+              name: "[folder]/[name].[ext]",
+              outputPath: "assets/images/"
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(woff2?|ttf|otf|eot|svg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[folder]/[name].[ext]",
+              outputPath: "assets/fonts/"
             }
           }
         ]
@@ -40,8 +52,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'pixelbricks-agency',
-      template: './src/index.html',
+      title: "pixelbricks-agency",
+      template: "./src/index.html",
       inject: true,
       minify: {
         removeComments: true,
@@ -49,11 +61,14 @@ module.exports = {
       }
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: "style.css"
     }),
     new CopyWebpackPlugin([{
-      from:'./src/assets/images',
-      to:'assets/images'
+      from:"./src/assets/images",
+      to:"assets/images"
+    },{
+      from:"./src/assets/fonts",
+      to:"assets/fonts"
     }])
   ]
 };

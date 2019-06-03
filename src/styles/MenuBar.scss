@@ -11,7 +11,7 @@
     bottom: 0;
     width: 100%;
     z-index: 100;
-    font-family: 'press_start_2pregular';
+    font-family: "press_start_2pregular";
 
     %button {
         cursor: pointer;
@@ -23,35 +23,35 @@
 
     &-agency {
         @extend %button;
-        background-image: url('../assets/images/menubar/menubar-agency-bt.png');
+        background-image: url("../assets/images/menubar/menubar-agency-bt.png");
         &:hover {
-            background-image: url('../assets/images/menubar/menubar-agency-bt-hover.png');
+            background-image: url("../assets/images/menubar/menubar-agency-bt-hover.png");
         }
         &:active {
-            background-image: url('../assets/images/menubar/menubar-agency-bt-active.png');
+            background-image: url("../assets/images/menubar/menubar-agency-bt-active.png");
         }
     }
 
     &-employees {
         @extend %button;
-        background-image: url('../assets/images/menubar/menubar-employee-bt.png');
+        background-image: url("../assets/images/menubar/menubar-employee-bt.png");
         &:hover {
-            background-image: url('../assets/images/menubar/menubar-employee-bt-hover.png');
+            background-image: url("../assets/images/menubar/menubar-employee-bt-hover.png");
         }
         &:active {
-            background-image: url('../assets/images/menubar/menubar-employee-bt-active.png');
+            background-image: url("../assets/images/menubar/menubar-employee-bt-active.png");
         }
 
     }
 
     &-projects {
         @extend %button;
-        background-image: url('../assets/images/menubar/menubar-projects-bt.png');
+        background-image: url("../assets/images/menubar/menubar-projects-bt.png");
         &:hover {
-            background-image: url('../assets/images/menubar/menubar-projects-bt-hover.png');
+            background-image: url("../assets/images/menubar/menubar-projects-bt-hover.png");
         }
         &:active {
-            background-image: url('../assets/images/menubar/menubar-projects-bt-active.png');
+            background-image: url("../assets/images/menubar/menubar-projects-bt-active.png");
         }
     }
 

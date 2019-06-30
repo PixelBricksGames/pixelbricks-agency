@@ -1,0 +1,71 @@
+@import "./../../assets/fonts/pressstart2p/stylesheet.css";
+$URL_ASSETS: "./../../assets/";
+$URL_ASSETS_IMAGES: "./../../assets/images/";
+
+.menu {
+    background-color: #8899AA;
+    border-top: 2px solid #C9D7DE;
+    box-sizing: border-box;
+    display: block;
+    height: 54px;
+    margin: 0;
+    padding: 0 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    font-family: "press_start_2pregular";
+
+    %menu-button {
+        display: inline-block;
+        margin: 2px 2px 0 2px;
+    }
+
+    &__button {
+        &--agency {
+            @extend %menu-button;
+            background-image: url($URL_ASSETS_IMAGES + "menu/button-agency.png");
+            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-agency-hover.png"); }
+            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-agency-active.png"); }
+        }
+
+        &--employee {
+            @extend %menu-button;
+            background-image: url($URL_ASSETS_IMAGES + "menu/button-employee.png");
+            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-employee-hover.png"); }
+            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-employee-active.png"); }
+        }
+
+        &--projects {
+            @extend %menu-button;
+            background-image: url($URL_ASSETS_IMAGES + "menu/button-projects.png");
+            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-projects-hover.png"); }
+            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-projects-active.png"); }
+        }
+
+        &--pixelbricks {
+            @extend %menu-button;
+            float: right;
+            background-image: url($URL_ASSETS_IMAGES + "menu/button-pixelbricks.png");
+            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-pixelbricks-hover.png"); }
+            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-pixelbricks-active.png"); }
+        }
+    }
+
+    &-money {
+        display: inline-block;
+        background-color: green;
+        height: 100%;
+        width: 100px;
+        margin: 10px 4px 0 4px;
+    }
+
+    &-date {
+        display: inline-block;
+        background-color: purple;
+        height: 100%;
+        width: 100px;
+        margin: 10px 4px 0 4px;
+    }
+
+}

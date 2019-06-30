@@ -1,0 +1,12 @@
+@import "./../../assets/fonts/pressstart2p/stylesheet.css";
+$URL_ASSETS: "./../../assets/";
+$URL_ASSETS_IMAGES: "./../../assets/images/";
+
+.status {
+    background-color: red;
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100px;
+    z-index: 100;
+}

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
-import MenuBar from "./MenuBar";
+import Menu from "./menu/Menu";
+import Status from "./status/Status";
+import Office from "./office/Office";
 
 import "../styles/App.scss";
 
@@ -8,8 +10,9 @@ class App extends Component {
     render() {
         return (
             <div className="app">
-                <MenuBar />
-                <img id="webpack-png" alt="webpack-png" />
+                <Menu />
+                <Status />
+                <Office />
             </div>
         );
     }

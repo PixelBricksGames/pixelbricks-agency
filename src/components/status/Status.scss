@@ -16,25 +16,23 @@ $DESKTOP_BREAKPOINT: 768px;
         width: 400px;
     }
 
+    &__labels {
+        background-color: red;
+        flex: 0 0 30px;
+        height: 100px;
+    }
+
     &__info {
         background-color: yellowgreen;
+        border-right: 5px solid red;
         flex: 1 1 auto;
         height: 100px;
     }
 
-    %value-bar {
-        height: 25px;
-    }
-
     &__value-bar {
-        &--reputation {
-            @extend %value-bar;
-            text-align: center;
-        }
-
-        &--money {
-            @extend %value-bar;
-            text-align: right;
-        }
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

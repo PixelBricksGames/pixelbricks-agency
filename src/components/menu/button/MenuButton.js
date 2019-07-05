@@ -1,36 +1,28 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import "./MenuButton.scss";
 
-class MenuButton extends Component {
+const MenuButton = (props) => {
 
-    constructor(props) {
-        super(props);
-        this.id = this.props.id;
-        this.styleClass = this.props.buttonClass;
-    }
-
-    Click(e) {
+    const OnClick = (e) => {
         e.preventDefault();
-        console.log("Click " + "this.id");
+        console.log("Click " + props.id);
     };
     
 
-    Hover(e) {
+    const OnHover = (e) => {
         e.preventDefault();
-        console.log("Hover ");
+        console.log("Hover " + props.id);
     };
 
-    render() {
-        return (
-            <button
-                className={`menu-button ${this.styleClass}`}
-                onClick={this.Click}
-                onMouseOver={this.Hover}
-            ></button>
-        );
-    }
+    return (
+        <button
+            className={`menu-button ${props.buttonClass}`}
+            onClick={OnClick}
+            onMouseOver={OnHover}
+        ></button>
+    );
 }
 
 MenuButton.propTypes = {

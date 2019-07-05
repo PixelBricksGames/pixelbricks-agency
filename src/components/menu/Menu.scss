@@ -5,16 +5,28 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 .menu {
     background-color: #8899AA;
     border-top: 2px solid #C9D7DE;
+    bottom: 0;
     box-sizing: border-box;
-    display: block;
+    display: flex;
+    font-family: "press_start_2pregular";
     height: 60px;
+    justify-content: space-between;
     margin: 0;
+    min-width: 340px;
     padding: 4px 20px;
     position: fixed;
-    bottom: 0;
     width: 100%;
     z-index: 100;
-    font-family: "press_start_2pregular";
+
+    &--left {
+        flex: 1 1 auto;
+        text-align: left;
+    }
+
+    &--right {
+        flex: 1 1 auto;
+        text-align: right;
+    }
 
     %menu-button {
         display: inline-block;
@@ -45,7 +57,6 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
         &--pixelbricks {
             @extend %menu-button;
-            float: right;
             background-image: url($URL_ASSETS_IMAGES + "menu/button-pixelbricks.png");
             &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-pixelbricks-hover.png"); }
             &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-pixelbricks-active.png"); }

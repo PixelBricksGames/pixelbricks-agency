@@ -4,11 +4,11 @@ import Menu from "./menu/Menu";
 import Status from "./status/Status";
 import Office from "./office/Office";
 
-import "../styles/App.scss";
+import "./App.scss";
 
 class App extends Component {
     render() {
-        const date = "12/07";
+        const date = new Date();
         const reputation = 12.5;
         const happines = 12.5;
         const quality = 30;

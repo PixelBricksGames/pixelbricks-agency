@@ -9,19 +9,20 @@ import "./Status.scss";
 const Status = (props) => {
     return (
         <section className="status">
-            <RoundCalendar date={props.date} />
+            <RoundCalendar date={props.date}/>
+            <div className="status__labels"></div>
             <div className="status__info">
-                <div className="status__value-bar--reputation">{props.reputation}</div>
+                <div className="status__value-bar">{props.reputation}</div>
                 <LiquidBar color="yellow" value={props.happines}/>
                 <LiquidBar color="blue" value={props.quality}/>
-                <div className="status__value-bar--money">{props.money}</div>
+                <div className="status__value-bar">{props.money}</div>
             </div>
         </section>
     );
 };
 
 Status.propTypes = {
-    date: PropTypes.string.isRequired,
+    date: PropTypes.instanceOf(Date).isRequired,
     reputation: PropTypes.number.isRequired,
     happines: PropTypes.number.isRequired,
     quality: PropTypes.number.isRequired,

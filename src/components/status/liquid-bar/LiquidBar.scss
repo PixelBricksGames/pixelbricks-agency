@@ -6,19 +6,27 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
     height: 25px;
     width: 100%;
 
+    %liquid {
+        height: 100%;
+    }
+
     &--yellow {
+        @extend %liquid;
         background-color: yellow;
     }
 
     &--blue {
+        @extend %liquid;
         background-color: blue;
     }
 
     &--green {
+        @extend %liquid;
         background-color: green;
     }
 
     &--red {
+        @extend %liquid;
         background-color: red;
     }
 }

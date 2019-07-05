@@ -1,3 +1,5 @@
+@import "./../../../assets/fonts/pressstart2p/stylesheet.css";
+
 .menu-button {
     background-color: transparent;
     background-position: center;
@@ -6,5 +8,22 @@
     cursor: pointer;
     display: block;
     height: 50px;
+    position: relative;
     width: 50px;
+
+    &__notification {
+        align-items: center;
+        background-color: #FF332D;
+        border-radius: 50%;
+        color: #FFFFFF;
+        display: flex;
+        font-family: "press_start_2pregular";
+        font-size: 12px;
+        height: 24px;
+        justify-content: center;
+        position: absolute;
+        right: -8px;
+        top: -8px;
+        width: 24px;
+    }
 }

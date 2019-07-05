@@ -2,6 +2,8 @@
 $URL_ASSETS: "./../../assets/";
 $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
+$MENU_MIN_WIDTH: 380;
+
 .menu {
     background-color: #8899AA;
     border-top: 2px solid #C9D7DE;
@@ -12,7 +14,7 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
     height: 60px;
     justify-content: space-between;
     margin: 0;
-    min-width: 340px;
+    min-width: $MENU_MIN_WIDTH + px;
     padding: 4px 20px;
     position: fixed;
     width: 100%;
@@ -31,6 +33,9 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
     %menu-button {
         display: inline-block;
         margin: 0 2px;
+        &:active {
+            .menu-button__notification { display: none; }
+        }
     }
 
     &__button {
@@ -53,6 +58,20 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
             background-image: url($URL_ASSETS_IMAGES + "menu/button-projects.png");
             &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-projects-hover.png"); }
             &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-projects-active.png"); }
+        }
+
+        &--tray {
+            @extend %menu-button;
+            background-image: url($URL_ASSETS_IMAGES + "menu/button-tray.png");
+            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-tray-hover.png"); }
+            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-tray-active.png"); }
+        }
+
+        &--configuration {
+            @extend %menu-button;
+            background-image: url($URL_ASSETS_IMAGES + "menu/button-configuration.png");
+            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-configuration-hover.png"); }
+            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-configuration-active.png"); }
         }
 
         &--pixelbricks {

@@ -1,0 +1,33 @@
+@import "./../../assets/fonts/pressstart2p/stylesheet.css";
+@import "./../../styles/mixins/image-sharp-edges.scss";
+$URL_ASSETS: "./../../assets/";
+$URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
+
+.alert {
+    &__overlay {
+        align-items: center;
+        background-color: #00000099;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 200;
+    }
+
+    &__window {
+        @extend %image-sharp-edges;
+        border: 9px solid;
+        min-width: 400px;
+        min-height: 200px;
+        border-image: url($URL_ASSETS_IMAGES + "common/alert-bg.png");
+        border-image-slice: 4 fill;
+
+        p {
+            font-family: "press_start_2pregular";
+            margin: 4px 10px;
+        }
+    }
+}

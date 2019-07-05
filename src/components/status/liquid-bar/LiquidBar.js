@@ -6,7 +6,11 @@ import "./LiquidBar.scss";
 const LiquidBar = (props) => {
     return (
         <div className="liquid-bar">
-            <div className={`liquid-bar--${props.color}`}  style={{width: props.value + "%"}}>{props.value}</div>
+            <div
+                className={`liquid-bar--${props.color}`}
+                style={{width: props.value + "%"}}>
+                    {props.value}
+            </div>
         </div>
     );
 };

@@ -20,14 +20,30 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
     &__window {
         @extend %image-sharp-edges;
         border: 9px solid;
-        min-width: 400px;
+        box-sizing: border-box;
+        width: 90%;
+        max-width: 800px;
         min-height: 200px;
-        border-image: url($URL_ASSETS_IMAGES + "common/alert-bg.png");
+        border-image: url($URL_ASSETS_IMAGES + "alert/alert-bg.png");
         border-image-slice: 4 fill;
+        position: relative;
+
+        button {
+            background-color: #00000055;
+            background-image: url($URL_ASSETS_IMAGES + "alert/alert-bt.png");
+            border: 0;
+            display: block;
+            height: 27px;
+            position: absolute;
+            right: 10px;
+            width: 27px;
+            &:hover { background-image: url($URL_ASSETS_IMAGES + "alert/alert-bt-hover.png"); }
+            &:active { background-color: #000000BB; }
+        }
 
         p {
             font-family: "press_start_2pregular";
-            margin: 4px 10px;
+            margin: 30px 10px;
         }
     }
 }

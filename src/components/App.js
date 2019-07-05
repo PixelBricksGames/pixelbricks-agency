@@ -17,25 +17,11 @@ class App extends Component {
             money: 125000000
         };
         const workCompleted = 2;
-        const alert = {
-            message: "ola ke ase",
-            btLeft: {
-                label: "Izq",
-                action: () => { console.log("Izquierda o ke ase") }
-            },
-            btCenter: {
-                label: "Cent",
-                action: () => { console.log("Centro o ke dise") }
-            },
-            btRight: {
-                label: "Der",
-                action: () => { console.log("Derecha o ke piensa") }
-            },
-        };
+        const alertMessage = "ola ke ase, ke dise amigo, te vienes a por unas mistas ricas? A ver si tengo ñ y Ñ, no vaya a sér que luego ná.";
         console.log(workCompleted);
         return (
             <div className="app">
-                <Alert {...alert} />
+                <Alert message={alertMessage} />
                 <Menu notifications={workCompleted} />
                 <Status {...status} />
                 <Office />

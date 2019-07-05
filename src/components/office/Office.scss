@@ -1,9 +1,9 @@
 @import "./../../assets/fonts/pressstart2p/stylesheet.css";
 $URL_ASSETS: "./../../assets/";
-$URL_ASSETS_IMAGES: "./../../assets/images/";
+$URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
 .office {
-    background-color: blue;
+    background-color: brown;
     position: absolute;
     top: 0;
     width: 100%;

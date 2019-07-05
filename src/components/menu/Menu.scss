@@ -1,15 +1,15 @@
 @import "./../../assets/fonts/pressstart2p/stylesheet.css";
 $URL_ASSETS: "./../../assets/";
-$URL_ASSETS_IMAGES: "./../../assets/images/";
+$URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
 .menu {
     background-color: #8899AA;
     border-top: 2px solid #C9D7DE;
     box-sizing: border-box;
     display: block;
-    height: 54px;
+    height: 60px;
     margin: 0;
-    padding: 0 20px;
+    padding: 4px 20px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -18,7 +18,7 @@ $URL_ASSETS_IMAGES: "./../../assets/images/";
 
     %menu-button {
         display: inline-block;
-        margin: 2px 2px 0 2px;
+        margin: 0 2px;
     }
 
     &__button {

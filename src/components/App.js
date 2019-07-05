@@ -8,10 +8,21 @@ import "../styles/App.scss";
 
 class App extends Component {
     render() {
+        const date = "12/07";
+        const reputation = 12.5;
+        const happines = 12.5;
+        const quality = 30;
+        const money = 125000000;
         return (
             <div className="app">
                 <Menu />
-                <Status />
+                <Status
+                    date={date}
+                    reputation={reputation}
+                    happines={happines}
+                    quality={quality}
+                    money={money}
+                />
                 <Office />
             </div>
         );

@@ -1,12 +1,40 @@
 @import "./../../assets/fonts/pressstart2p/stylesheet.css";
 $URL_ASSETS: "./../../assets/";
-$URL_ASSETS_IMAGES: "./../../assets/images/";
+$URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
+$DESKTOP_BREAKPOINT: 768px;
 
 .status {
-    background-color: red;
-    position: absolute;
-    top: 0;
-    width: 200px;
+    display: flex;
     height: 100px;
+    margin: 20px auto;
+    position: relative;
+    padding: 0 20px;
     z-index: 100;
+    
+    @media screen and (min-width: $DESKTOP_BREAKPOINT) {
+        position: absolute;
+        width: 400px;
+    }
+
+    &__info {
+        background-color: yellowgreen;
+        flex: 1 1 auto;
+        height: 100px;
+    }
+
+    %value-bar {
+        height: 25px;
+    }
+
+    &__value-bar {
+        &--reputation {
+            @extend %value-bar;
+            text-align: center;
+        }
+
+        &--money {
+            @extend %value-bar;
+            text-align: right;
+        }
+    }
 }

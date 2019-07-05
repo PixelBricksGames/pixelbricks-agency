@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 import "./MenuButton.scss";
 
@@ -31,5 +32,10 @@ class MenuButton extends Component {
         );
     }
 }
+
+MenuButton.propTypes = {
+    id: PropTypes.string.isRequired,
+    buttonClass: PropTypes.string
+};
 
 export default MenuButton;

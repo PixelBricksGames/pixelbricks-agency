@@ -1,0 +1,10 @@
+@import "./../../../assets/fonts/pressstart2p/stylesheet.css";
+$URL_ASSETS: "./../../../assets/";
+$URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
+
+.round-calendar {
+    background-color: white;
+    flex: 0 0 100px;
+    height: 100px;
+    width: 100px;
+}

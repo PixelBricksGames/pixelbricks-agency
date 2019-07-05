@@ -20,14 +20,3 @@ class Menu extends Component {
 }
 
 export default Menu;
-
-/*
-<div className="menu-money">
-                    <div className="menubar-money_currency"></div>
-                    <div className="menubar-money_amount">1.000.000</div>
-                </div>
-
-                <div className="menu-date">
-                    DD / MM / YYYY
-                </div>
-*/

@@ -1,16 +1,21 @@
 @import "./../../assets/fonts/pressstart2p/stylesheet.css";
+@import "./../../styles/variables.scss";
 @import "./../../styles/mixins/image-sharp-edges.scss";
+
 $URL_ASSETS: "./../../assets/";
 $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
+
+$OVERLAY_MIN_WIDTH: $GAME_MIN_WIDTH;
 
 .alert {
     &__overlay {
         align-items: center;
         background-color: #00000099;
-        display: flex;
+        display: none;
         height: 100%;
         justify-content: center;
         left: 0;
+        min-width: $OVERLAY_MIN_WIDTH + px;
         position: fixed;
         top: 0;
         width: 100%;

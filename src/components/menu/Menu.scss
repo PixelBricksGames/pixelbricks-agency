@@ -1,12 +1,15 @@
 @import "./../../assets/fonts/pressstart2p/stylesheet.css";
+@import "./../../styles/variables.scss";
+@import "./../../styles/colors.scss";
+
 $URL_ASSETS: "./../../assets/";
 $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
-$MENU_MIN_WIDTH: 380;
+$MENU_MIN_WIDTH: $GAME_MIN_WIDTH;
 
 .menu {
-    background-color: #8899AA;
-    border-top: 2px solid #C9D7DE;
+    background-color: $menu-color-bg;
+    border-top: 2px solid $menu-color-border-top;
     bottom: 0;
     box-sizing: border-box;
     display: flex;
@@ -81,21 +84,4 @@ $MENU_MIN_WIDTH: 380;
             &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-pixelbricks-active.png"); }
         }
     }
-
-    &-money {
-        display: inline-block;
-        background-color: green;
-        height: 100%;
-        width: 100px;
-        margin: 10px 4px 0 4px;
-    }
-
-    &-date {
-        display: inline-block;
-        background-color: purple;
-        height: 100%;
-        width: 100px;
-        margin: 10px 4px 0 4px;
-    }
-
 }

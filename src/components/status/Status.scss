@@ -1,7 +1,11 @@
 @import "./../../assets/fonts/pressstart2p/stylesheet.css";
+@import "./../../styles/variables.scss";
+@import "./../../styles/colors.scss";
+@import "./../../styles/mixins/image-sharp-edges.scss";
+
 $URL_ASSETS: "./../../assets/";
 $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
-$DESKTOP_BREAKPOINT: 768px;
+$DSKTP_BREAKPOINT: $DESKTOP_BREAKPOINT;
 
 .status {
     display: flex;
@@ -11,28 +15,72 @@ $DESKTOP_BREAKPOINT: 768px;
     padding: 0 20px;
     z-index: 100;
     
-    @media screen and (min-width: $DESKTOP_BREAKPOINT) {
+    @media screen and (min-width: $DSKTP_BREAKPOINT) {
         position: absolute;
         width: 400px;
     }
 
+    %status-borders {
+        border-bottom: 1px solid $status__bar-color-border-bottom;
+        border-top: 1px solid $status__bar-color-border-top;
+    }
+
+    %status-bar {
+        @extend %status-borders;
+        align-items: center;
+        display: flex;
+        height: 23px;
+        justify-content: center;
+    }
+
+    %value-bar-side {
+        content: '';
+        width: 4px;
+        height: 23px;
+        position: absolute;
+    }
+
     &__labels {
-        background-color: red;
+        background-image: url($URL_ASSETS_IMAGES + "status/status-bar-bg.png");
         flex: 0 0 30px;
         height: 100px;
+
+        &--icon {
+            @extend %status-bar;
+        }
+    }
+
+    &__ends {
+        @extend %status-borders;
+        background-image: url($URL_ASSETS_IMAGES + "status/status-ends-bg.png");
+        flex: 0 0 4px;
+        height: 98px;
     }
 
     &__info {
-        background-color: yellowgreen;
-        border-right: 5px solid red;
         flex: 1 1 auto;
         height: 100px;
     }
 
     &__value-bar {
-        height: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %status-bar;
+        background-image: url($URL_ASSETS_IMAGES + "status/status-value-bar-bg.png");
+        color: $status__bar--value-color-text;
+        font-family: "press_start_2pregular";
+        font-size: 10px;
+        position: relative;
+
+        &:before {
+            @extend %value-bar-side;
+            background-image: url($URL_ASSETS_IMAGES + "status/status-value-bar-borders.png");
+            background-position: left;
+            left: 0;
+        }
+        &:after {
+            @extend %value-bar-side;
+            background-image: url($URL_ASSETS_IMAGES + "status/status-value-bar-borders.png");
+            background-position: right;
+            right: 0;
+        }
     }
 }

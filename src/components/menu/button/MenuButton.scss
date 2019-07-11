@@ -1,4 +1,5 @@
 @import "./../../../assets/fonts/pressstart2p/stylesheet.css";
+@import "./../../../styles/colors.scss";
 
 .menu-button {
     background-color: transparent;
@@ -13,9 +14,9 @@
 
     &__notification {
         align-items: center;
-        background-color: #FF332D;
+        background-color: $menu__button--notification-color-bg;
         border-radius: 50%;
-        color: #FFFFFF;
+        color: $menu__button--notification-color-text;
         display: flex;
         font-family: "press_start_2pregular";
         font-size: 12px;
@@ -25,5 +26,6 @@
         right: -8px;
         top: -8px;
         width: 24px;
+        z-index: 10;
     }
 }

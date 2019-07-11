@@ -8,17 +8,6 @@ const MenuButton = (props) => {
     let notificationsTemplate;
     const MAX_NOTIFICATIONS_VALUE = "!"; 
 
-    const OnClick = (e) => {
-        e.preventDefault();
-        console.log("Click " + props.id);
-    };
-    
-
-    const OnHover = (e) => {
-        e.preventDefault();
-        console.log("Hover " + props.id);
-    };
-
     if (props.notifications && props.notifications !== 0) {
         let value = props.notifications < 10 ? props.notifications : MAX_NOTIFICATIONS_VALUE;
         notificationsTemplate = <div className="menu-button__notification">{value}</div>;
@@ -26,9 +15,9 @@ const MenuButton = (props) => {
 
     return (
         <button
-            className={`menu-button ${props.buttonClass}`}
-            onClick={OnClick}
-            onMouseOver={OnHover}
+            className={`menu-button menu__button--${props.id}`}
+            onClick={props.click}
+            onMouseOver={props.hover}
         >
             { notificationsTemplate }
         </button>
@@ -37,8 +26,16 @@ const MenuButton = (props) => {
 
 MenuButton.propTypes = {
     id: PropTypes.string.isRequired,
-    buttonClass: PropTypes.string,
-    notifications: PropTypes.number
+    notifications: PropTypes.number,
+    click: PropTypes.func,
+    hover: PropTypes.func,
 };
+
+MenuButton.defaultProps = {
+    id: "",
+    notifications: undefined,
+    click: f=>f,
+    hover: f=>f,
+}
 
 export default MenuButton;

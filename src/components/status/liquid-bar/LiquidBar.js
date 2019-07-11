@@ -9,7 +9,7 @@ const LiquidBar = (props) => {
             <div
                 className={`liquid-bar--${props.color}`}
                 style={{width: props.value + "%"}}>
-                    {props.value}
+                    <span>{ props.value + "%" }</span>
             </div>
         </div>
     );

@@ -13,7 +13,7 @@ class App extends Component {
             date: new Date(),
             reputation: 12.5,
             happines: 12.5,
-            quality: 100,
+            quality: 50,
             money: 125000000
         };
         const workCompleted = 2;

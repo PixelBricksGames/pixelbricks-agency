@@ -21,23 +21,8 @@ $DSKTP_BREAKPOINT: $DESKTOP_BREAKPOINT;
     }
 
     %status-borders {
-        border-bottom: 1px solid $status__bar-color-border-bottom;
-        border-top: 1px solid $status__bar-color-border-top;
-    }
-
-    %status-bar {
-        @extend %status-borders;
-        align-items: center;
-        display: flex;
-        height: 23px;
-        justify-content: center;
-    }
-
-    %value-bar-side {
-        content: '';
-        width: 4px;
-        height: 23px;
-        position: absolute;
+        border-bottom: 1px solid $status-color-border-bottom;
+        border-top: 1px solid $status-color-border-top;
     }
 
     &__labels {
@@ -46,11 +31,15 @@ $DSKTP_BREAKPOINT: $DESKTOP_BREAKPOINT;
         height: 100px;
 
         &--icon {
-            @extend %status-bar;
+            @extend %status-borders;
+            align-items: center;
+            display: flex;
+            height: 23px;
+            justify-content: center;
         }
     }
 
-    &__ends {
+    &__sides {
         @extend %status-borders;
         background-image: url($URL_ASSETS_IMAGES + "status/status-ends-bg.png");
         flex: 0 0 4px;
@@ -60,27 +49,5 @@ $DSKTP_BREAKPOINT: $DESKTOP_BREAKPOINT;
     &__info {
         flex: 1 1 auto;
         height: 100px;
-    }
-
-    &__value-bar {
-        @extend %status-bar;
-        background-image: url($URL_ASSETS_IMAGES + "status/status-value-bar-bg.png");
-        color: $status__bar--value-color-text;
-        font-family: "press_start_2pregular";
-        font-size: 10px;
-        position: relative;
-
-        &:before {
-            @extend %value-bar-side;
-            background-image: url($URL_ASSETS_IMAGES + "status/status-value-bar-borders.png");
-            background-position: left;
-            left: 0;
-        }
-        &:after {
-            @extend %value-bar-side;
-            background-image: url($URL_ASSETS_IMAGES + "status/status-value-bar-borders.png");
-            background-position: right;
-            right: 0;
-        }
     }
 }

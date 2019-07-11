@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import RoundCalendar from "./round-calendar/RoundCalendar";
-import LiquidBar from "./liquid-bar/LiquidBar";
+import InfoBar from "./info-bar/InfoBar";
 
 import "./Status.scss";
 
@@ -16,14 +16,14 @@ const Status = (props) => {
                 <div className="status__labels--icon">3</div>
                 <div className="status__labels--icon">4</div>
             </div>
-            <div className="status__ends"></div>
+            <div className="status__sides"></div>
             <div className="status__info">
-                <div className="status__value-bar">{props.reputation}</div>
-                <LiquidBar color="yellow" value={props.happines}/>
-                <LiquidBar color="blue" value={props.quality}/>
-                <div className="status__value-bar">{props.money}</div>
+                <InfoBar value={props.reputation}/>
+                <InfoBar value={props.happines} percentage={true} color="yellow"/>
+                <InfoBar value={props.quality} percentage={true} color="green" />
+                <InfoBar value={props.money} />
             </div>
-            <div className="status__ends"></div>
+            <div className="status__sides"></div>
         </section>
     );
 };

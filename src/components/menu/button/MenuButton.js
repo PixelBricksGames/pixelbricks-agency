@@ -5,8 +5,8 @@ import "./MenuButton.scss";
 
 const MenuButton = (props) => {
 
+    const MAX_NOTIFICATIONS_VALUE = "!";
     let notificationsTemplate;
-    const MAX_NOTIFICATIONS_VALUE = "!"; 
 
     if (props.notifications && props.notifications !== 0) {
         let value = props.notifications < 10 ? props.notifications : MAX_NOTIFICATIONS_VALUE;

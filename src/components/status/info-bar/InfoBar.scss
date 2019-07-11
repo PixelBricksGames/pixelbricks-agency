@@ -1,0 +1,58 @@
+@import "./../../../assets/fonts/pressstart2p/stylesheet.css";
+@import "./../../../styles/colors.scss";
+
+$URL_ASSETS: "./../../../assets/";
+$URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
+
+.info-bar {
+    background-image: url($URL_ASSETS_IMAGES + "status/info-bar-bg.png");
+    border-top: 1px solid $status__info-bar-color-border-top;
+    border-bottom: 1px solid $status__info-bar-color-border-bottom;
+    height: 23px;
+    width: 100%;
+    position: relative;
+
+    %info-bar__base--side {
+        content: '';
+        width: 4px;
+        height: 23px;
+        position: absolute;
+        background-image: url($URL_ASSETS_IMAGES + "status/info-bar-sides.png");
+    }
+
+    &__value {
+        align-items: center;
+        color: $status__info-bar--value-color-text;
+        display: flex;
+        font-family: "press_start_2pregular";
+        font-size: 10px;
+        height: 23px;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+    }
+
+    &__fill {
+        height: 23px;
+        opacity: .5;
+        position: absolute;
+        transition: all .5s ease-out;
+        z-index: 1;
+    }
+
+    &__base {
+        position: relative;
+
+        &:before {
+            @extend %info-bar__base--side;
+            background-position: left;
+            left: 0;
+        }
+        &:after {
+            @extend %info-bar__base--side;
+            background-position: right;
+            right: 0;
+        }
+    }
+}

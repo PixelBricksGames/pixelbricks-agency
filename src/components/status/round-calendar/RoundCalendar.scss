@@ -3,9 +3,20 @@ $URL_ASSETS: "./../../../assets/";
 $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
 .round-calendar {
-    background-color: white;
-    border-radius: 50%;
+    background-image: url($URL_ASSETS_IMAGES + "status/round-calendar-bg.png");
     flex: 0 0 100px;
     height: 100px;
     width: 100px;
+
+    &__date {
+        font-family: "press_start_2pregular";
+        left: 34px;
+        position: absolute;
+        text-align: center;
+        top: 36px;
+        width: 50px;
+        
+        &--day { font-size: 16px; }
+        &--month { font-size: 10px; }
+    }
 }

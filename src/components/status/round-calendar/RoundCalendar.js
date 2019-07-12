@@ -11,11 +11,15 @@ const RoundCalendar = (props) => {
     console.log("HOURS_PER_GAME_DAYS", HOURS_PER_GAME_DAYS);
     console.log("RoundCalendar", props);
 
-    let gameDate = new Date(props.date).getDate();
+    let gameDay = new Date(props.date).getDate();
+    let gameMonth = new Date(props.date).getMonth();
 
     return (
         <div className="round-calendar">
-            <div>{ gameDate }</div>
+            <div className="round-calendar__date">
+                <div className="round-calendar__date--day">{ gameDay }</div>
+                <div className="round-calendar__date--month">JUL</div>
+            </div>
         </div>
     );
 }

@@ -11,9 +11,9 @@ class App extends Component {
     render() {
         const status = {
             date: new Date(),
-            reputation: 12.5,
+            reputation: -35,
             happines: 12.5,
-            quality: 50,
+            quality: 34.5,
             money: 125000000
         };
         const workCompleted = 2;

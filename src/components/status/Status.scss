@@ -11,8 +11,9 @@ $DSKTP_BREAKPOINT: $DESKTOP_BREAKPOINT;
     display: flex;
     height: 100px;
     margin: 20px auto;
+    min-width: 280px;
     position: relative;
-    padding: 0 20px;
+    padding: 0 10px;
     z-index: 100;
     
     @media screen and (min-width: $DSKTP_BREAKPOINT) {
@@ -20,30 +21,18 @@ $DSKTP_BREAKPOINT: $DESKTOP_BREAKPOINT;
         width: 400px;
     }
 
-    %status-borders {
-        border-bottom: 1px solid $status-color-border-bottom;
-        border-top: 1px solid $status-color-border-top;
-    }
-
     &__labels {
-        background-image: url($URL_ASSETS_IMAGES + "status/status-bar-bg.png");
+        background-image: url($URL_ASSETS_IMAGES + "status/status-labels-bg.png");
+        background-position: right 0px;
         flex: 0 0 30px;
         height: 100px;
 
         &--icon {
-            @extend %status-borders;
             align-items: center;
             display: flex;
-            height: 23px;
+            height: 25px;
             justify-content: center;
         }
-    }
-
-    &__sides {
-        @extend %status-borders;
-        background-image: url($URL_ASSETS_IMAGES + "status/status-ends-bg.png");
-        flex: 0 0 4px;
-        height: 98px;
     }
 
     &__info {

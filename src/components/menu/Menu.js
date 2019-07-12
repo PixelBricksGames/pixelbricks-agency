@@ -24,24 +24,27 @@ const Menu = (props) => {
                     click={OnClick}
                 />
                 <MenuButton
+                    id="projects"
+                    click={OnClick}
+                    notifications={props.notifications}
+                />
+                <MenuButton
                     id="employee"
                     click={OnClick}
                 />
                 <MenuButton
-                    id="projects"
+                    id="search-projects"
                     click={OnClick}
-                    notifications={props.notifications}
+                />
+                <MenuButton
+                    id="search-employee"
+                    click={OnClick}
                 />
             </section>
             <section className="menu--right">
                 <MenuButton
                     id="configuration"
                     click={OnClick}
-                />
-                <MenuButton
-                    id="pixelbricks"
-                    click={OnClick}
-                    hover={OnHover}
                 />
             </section>
         </section>

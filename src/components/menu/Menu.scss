@@ -8,37 +8,36 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 $MENU_MIN_WIDTH: $GAME_MIN_WIDTH;
 
 .menu {
-    background-color: $menu-color-bg;
-    border-top: 2px solid $menu-color-border-top;
     bottom: 0;
     box-sizing: border-box;
     display: flex;
-    font-family: "press_start_2pregular";
-    height: 60px;
     justify-content: space-between;
     margin: 0;
     min-width: $MENU_MIN_WIDTH + px;
-    padding: 4px 20px;
+    padding: 10px 8px;
     position: fixed;
     width: 100%;
     z-index: 100;
 
-    &--left {
+    %menu__side {
+        height: 50px;
         flex: 1 1 auto;
+    }
+
+    &--left {
+        @extend %menu__side;
         text-align: left;
     }
 
     &--right {
-        flex: 1 1 auto;
+        @extend %menu__side;
         text-align: right;
     }
 
     %menu-button {
         display: inline-block;
         margin: 0 2px;
-        &:active {
-            .menu-button__notification { display: none; }
-        }
+        &:active { .menu-button__notification { display: none; }}
     }
 
     &__button {
@@ -49,13 +48,6 @@ $MENU_MIN_WIDTH: $GAME_MIN_WIDTH;
             &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-agency-active.png"); }
         }
 
-        &--employee {
-            @extend %menu-button;
-            background-image: url($URL_ASSETS_IMAGES + "menu/button-employee.png");
-            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-employee-hover.png"); }
-            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-employee-active.png"); }
-        }
-
         &--projects {
             @extend %menu-button;
             background-image: url($URL_ASSETS_IMAGES + "menu/button-projects.png");
@@ -63,11 +55,25 @@ $MENU_MIN_WIDTH: $GAME_MIN_WIDTH;
             &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-projects-active.png"); }
         }
 
-        &--tray {
+        &--employee {
             @extend %menu-button;
-            background-image: url($URL_ASSETS_IMAGES + "menu/button-tray.png");
-            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-tray-hover.png"); }
-            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-tray-active.png"); }
+            background-image: url($URL_ASSETS_IMAGES + "menu/button-employee.png");
+            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-employee-hover.png"); }
+            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-employee-active.png"); }
+        }
+
+        &--search-projects {
+            @extend %menu-button;
+            background-image: url($URL_ASSETS_IMAGES + "menu/button-search-projects.png");
+            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-search-projects-hover.png"); }
+            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-search-projects-active.png"); }
+        }
+
+        &--search-employee {
+            @extend %menu-button;
+            background-image: url($URL_ASSETS_IMAGES + "menu/button-search-employee.png");
+            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-search-employee-hover.png"); }
+            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-search-employee-active.png"); }
         }
 
         &--configuration {
@@ -75,13 +81,6 @@ $MENU_MIN_WIDTH: $GAME_MIN_WIDTH;
             background-image: url($URL_ASSETS_IMAGES + "menu/button-configuration.png");
             &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-configuration-hover.png"); }
             &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-configuration-active.png"); }
-        }
-
-        &--pixelbricks {
-            @extend %menu-button;
-            background-image: url($URL_ASSETS_IMAGES + "menu/button-pixelbricks.png");
-            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-pixelbricks-hover.png"); }
-            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-pixelbricks-active.png"); }
         }
     }
 }

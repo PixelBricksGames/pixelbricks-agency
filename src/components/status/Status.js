@@ -16,14 +16,12 @@ const Status = (props) => {
                 <div className="status__labels--icon">3</div>
                 <div className="status__labels--icon">4</div>
             </div>
-            <div className="status__sides"></div>
             <div className="status__info">
                 <InfoBar value={props.reputation}/>
-                <InfoBar value={props.happines} percentage={true} color="yellow"/>
-                <InfoBar value={props.quality} percentage={true} color="green" />
+                <InfoBar value={props.happines} percentage={true} color="#FFCC33"/>
+                <InfoBar value={props.quality} percentage={true} color="#9DCE90" />
                 <InfoBar value={props.money} />
             </div>
-            <div className="status__sides"></div>
         </section>
     );
 };

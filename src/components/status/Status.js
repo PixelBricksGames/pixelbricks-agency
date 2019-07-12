@@ -11,10 +11,10 @@ const Status = (props) => {
         <section className="status">
             <RoundCalendar date={props.date}/>
             <div className="status__labels">
-                <div className="status__labels--icon">1</div>
-                <div className="status__labels--icon">2</div>
-                <div className="status__labels--icon">3</div>
-                <div className="status__labels--icon">4</div>
+                <div className="status__labels--icon_karma-green"></div>
+                <div className="status__labels--icon_emoji-happy"></div>
+                <div className="status__labels--icon-folder"></div>
+                <div className="status__labels--icon-currency"></div>
             </div>
             <div className="status__info">
                 <InfoBar value={props.reputation}/>

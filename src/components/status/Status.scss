@@ -21,17 +21,46 @@ $DSKTP_BREAKPOINT: $DESKTOP_BREAKPOINT;
         width: 400px;
     }
 
+    %label-icon {
+        display: block;
+        height: 25px;
+        margin: 0 6px 0 10px;
+        width: 15px;
+    }
+
     &__labels {
         background-image: url($URL_ASSETS_IMAGES + "status/status-labels-bg.png");
-        background-position: right 0px;
         flex: 0 0 30px;
         height: 100px;
 
-        &--icon {
-            align-items: center;
-            display: flex;
-            height: 25px;
-            justify-content: center;
+        &--icon_karma-green {
+            @extend %label-icon;
+            background-image: url($URL_ASSETS_IMAGES + "status/label-karma-green.png");
+        }
+
+        &--icon_karma-red {
+            @extend %label-icon;
+            background-image: url($URL_ASSETS_IMAGES + "status/label-karma-red.png");
+        }
+
+        &--icon_emoji-happy {
+            @extend %label-icon;
+            background-image: url($URL_ASSETS_IMAGES + "status/label-emoji-happy.png");
+        }
+
+        &--icon_emoji-angry {
+            @extend %label-icon;
+            background-image: url($URL_ASSETS_IMAGES + "status/label-emoji-angry.png");
+        }
+
+        &--icon-folder {
+            @extend %label-icon;
+            background-image: url($URL_ASSETS_IMAGES + "status/label-folder.png");
+        }
+
+        &--icon-currency {
+            @extend %label-icon;
+            background-image: url($URL_ASSETS_IMAGES + "status/label-currency.png");
         }
     }
 

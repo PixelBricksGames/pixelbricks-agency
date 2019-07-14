@@ -12,9 +12,9 @@ class App extends Component {
     state = {
         status: {
             date: new Date(),
-            reputation: -35,
+            reputation: 3005,
             karma: 10,
-            happiness: 12.5,
+            happiness: 70.5,
             quality: 34.5,
             money: 125000000
         },

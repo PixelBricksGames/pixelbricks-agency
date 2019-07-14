@@ -7,44 +7,59 @@ import "./Menu.scss";
 
 const Menu = (props) => {
 
-    const OnClick = (id) => {
-        console.log("Click", id);
-    };
-    
+    const OpenMenuAgency = () => {
+        console.log("Open Menu Agency");
+    }
 
-    const OnHover = (id) => {
-        console.log("Hover");
-    };
+    const OpenMenuProjects = () => {
+        console.log("Open Menu Projects");
+    }
+
+    const OpenMenuEmployees = () => {
+        console.log("Open Menu Employees");
+    }
+
+    const OpenMenuSearchProjects = () => {
+        console.log("Open Menu SearchProjects");
+    }
+
+    const OpenMenuSearchEmployees = () => {
+        console.log("Open Menu SearchEmployees");
+    }
+
+    const OpenMenuConfiguration = () => {
+        console.log("Open Menu Configuration");
+    }
 
     return (
         <section className="menu">
             <section className="menu--left">
                 <MenuButton
                     id="agency"
-                    click={OnClick}
+                    click={OpenMenuAgency}
                 />
                 <MenuButton
                     id="projects"
-                    click={OnClick}
+                    click={OpenMenuProjects}
                     notifications={props.notifications}
                 />
                 <MenuButton
-                    id="employee"
-                    click={OnClick}
+                    id="employees"
+                    click={OpenMenuEmployees}
                 />
                 <MenuButton
                     id="search-projects"
-                    click={OnClick}
+                    click={OpenMenuSearchProjects}
                 />
                 <MenuButton
-                    id="search-employee"
-                    click={OnClick}
+                    id="search-employees"
+                    click={OpenMenuSearchEmployees}
                 />
             </section>
             <section className="menu--right">
                 <MenuButton
                     id="configuration"
-                    click={OnClick}
+                    click={OpenMenuConfiguration}
                 />
             </section>
         </section>

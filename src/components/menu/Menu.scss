@@ -55,11 +55,11 @@ $MENU_MIN_WIDTH: $GAME_MIN_WIDTH;
             &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-projects-active.png"); }
         }
 
-        &--employee {
+        &--employees {
             @extend %menu-button;
-            background-image: url($URL_ASSETS_IMAGES + "menu/button-employee.png");
-            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-employee-hover.png"); }
-            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-employee-active.png"); }
+            background-image: url($URL_ASSETS_IMAGES + "menu/button-employees.png");
+            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-employees-hover.png"); }
+            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-employees-active.png"); }
         }
 
         &--search-projects {
@@ -69,11 +69,11 @@ $MENU_MIN_WIDTH: $GAME_MIN_WIDTH;
             &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-search-projects-active.png"); }
         }
 
-        &--search-employee {
+        &--search-employees {
             @extend %menu-button;
-            background-image: url($URL_ASSETS_IMAGES + "menu/button-search-employee.png");
-            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-search-employee-hover.png"); }
-            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-search-employee-active.png"); }
+            background-image: url($URL_ASSETS_IMAGES + "menu/button-search-employees.png");
+            &:hover { background-image: url($URL_ASSETS_IMAGES + "menu/button-search-employees-hover.png"); }
+            &:active { background-image: url($URL_ASSETS_IMAGES + "menu/button-search-employees-active.png"); }
         }
 
         &--configuration {

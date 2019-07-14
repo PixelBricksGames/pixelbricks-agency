@@ -9,17 +9,15 @@ const InfoBar = (props) => {
             <div className="info-bar__base"></div>
             <div
                 className="info-bar__fill"
-                style={{backgroundColor: props.color, width: props.value + "%", display: props.percentage ? "block" : "none"}}
+                style={{width: (props.percentage ? 100 - props.value : 100) + "%"}}
             ></div>
-            
-            <div className="info-bar__value">{ props.value + (props.percentage ? "%" : "")}</div>
+            <div className="info-bar__value">{ props.value }</div>
         </div>
     );
 };
 
 InfoBar.propTypes = {
-    value: PropTypes.number.isRequired,
-    color: PropTypes.string,
+    value: PropTypes.string.isRequired,
     percentage: PropTypes.bool
 };
 

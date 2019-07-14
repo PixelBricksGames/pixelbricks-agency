@@ -5,35 +5,40 @@ $URL_ASSETS: "./../../../assets/";
 $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
 .info-bar {
+    background-color: #202020;
     height: 25px;
     width: 100%;
     position: relative;
 
-    &__base {    
-        background-color: #202020;
+    &__base {  
+        background-image: url($URL_ASSETS_IMAGES + "status/info-bar-color.png"); 
+        background-size: 100%; 
         height: 100%;
+        opacity: .8;
         position: absolute;
         width: 100%;
     }
 
     &__fill {
+        background-color: #202020;
         height: 100%;
         opacity: 1;
         position: absolute;
+        right: 0;
         transition: all .5s ease-out;
     }
 
     %info-bar__value--side {
+        background-image: url($URL_ASSETS_IMAGES + "status/info-bar-sides.png");
         content: '';
-        width: 4px;
         height: 100%;
         position: absolute;
-        background-image: url($URL_ASSETS_IMAGES + "status/info-bar-sides.png");
+        width: 5px;
     }
 
     &__value {
-        background-image: url($URL_ASSETS_IMAGES + "status/info-bar-bg.png");
         align-items: center;
+        background-image: url($URL_ASSETS_IMAGES + "status/info-bar-bg.png");
         color: $status__info-bar--value-color-text;
         display: flex;
         font-family: "press_start_2pregular";
@@ -42,6 +47,8 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
         justify-content: center;
         position: absolute;
         width: 100%;
+
+        text-shadow: 0px 0px 5px #202020;
 
         &:before {
             @extend %info-bar__value--side;

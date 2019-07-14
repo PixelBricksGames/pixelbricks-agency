@@ -21,46 +21,48 @@ $DSKTP_BREAKPOINT: $DESKTOP_BREAKPOINT;
         width: 400px;
     }
 
-    %label-icon {
-        display: block;
-        height: 25px;
-        margin: 0 6px 0 10px;
-        width: 15px;
-    }
-
     &__labels {
         background-image: url($URL_ASSETS_IMAGES + "status/status-labels-bg.png");
         flex: 0 0 30px;
         height: 100px;
 
-        &--icon_karma-green {
-            @extend %label-icon;
-            background-image: url($URL_ASSETS_IMAGES + "status/label-karma-green.png");
+        div {
+            display: block;
+            height: 25px;
+            margin: 0 6px 0 10px;
+            width: 15px;
         }
 
-        &--icon_karma-red {
-            @extend %label-icon;
-            background-image: url($URL_ASSETS_IMAGES + "status/label-karma-red.png");
+        .icon__reputation--good {
+            background-image: url($URL_ASSETS_IMAGES + "status/icon-reputation-good.png");
         }
 
-        &--icon_emoji-happy {
-            @extend %label-icon;
-            background-image: url($URL_ASSETS_IMAGES + "status/label-emoji-happy.png");
+        .icon__reputation--bad {
+            background-image: url($URL_ASSETS_IMAGES + "status/icon-reputation-bad.png");
         }
 
-        &--icon_emoji-angry {
-            @extend %label-icon;
-            background-image: url($URL_ASSETS_IMAGES + "status/label-emoji-angry.png");
+        .icon__happiness--good {
+            background-image: url($URL_ASSETS_IMAGES + "status/icon-happiness-good.png");
         }
 
-        &--icon-folder {
-            @extend %label-icon;
-            background-image: url($URL_ASSETS_IMAGES + "status/label-folder.png");
+        .icon__happiness--neutral {
+            background-image: url($URL_ASSETS_IMAGES + "status/icon-happiness-neutral.png");
         }
 
-        &--icon-currency {
-            @extend %label-icon;
-            background-image: url($URL_ASSETS_IMAGES + "status/label-currency.png");
+        .icon__happiness--bad {
+            background-image: url($URL_ASSETS_IMAGES + "status/icon-happiness-bad.png");
+        }
+
+        .icon__quality--good {
+            background-image: url($URL_ASSETS_IMAGES + "status/icon-quality-good.png");
+        }
+
+        .icon__quality--bad {
+            background-image: url($URL_ASSETS_IMAGES + "status/icon-quality-bad.png");
+        }
+
+        .icon__money {
+            background-image: url($URL_ASSETS_IMAGES + "status/icon-money.png");
         }
     }
 

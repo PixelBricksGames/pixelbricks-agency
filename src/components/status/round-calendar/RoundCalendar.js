@@ -16,6 +16,8 @@ const RoundCalendar = (props) => {
 
     return (
         <div className="round-calendar">
+            <div className="round-calendar__day"></div>
+            <div className="round-calendar__base"></div>
             <div className="round-calendar__date">
                 <div className="round-calendar__date--day">{ gameDay }</div>
                 <div className="round-calendar__date--month">JUL</div>

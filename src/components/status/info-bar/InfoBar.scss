@@ -10,9 +10,9 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
     width: 100%;
     position: relative;
 
-    &__base {  
-        background-image: url($URL_ASSETS_IMAGES + "status/info-bar-color.png"); 
-        background-size: 100%; 
+    &__base {
+        background-image: url($URL_ASSETS_IMAGES + "status/info-bar-color.png");
+        background-size: 100%;
         height: 100%;
         opacity: .8;
         position: absolute;

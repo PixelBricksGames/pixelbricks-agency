@@ -18,14 +18,18 @@ class App extends Component {
             quality: 34.5,
             money: 125000000
         },
+        alert: {
+            message: "ola ke ase, ke dise amigo, te vienes a por unas mistas ricas? A ver si tengo ñ y Ñ, no vaya a sér que luego ná.",
+            show: true,
+            callback: () => { console.log("ola ke ase") }
+        },
         workCompleted: 2,
-        alertMessage: "ola ke ase, ke dise amigo, te vienes a por unas mistas ricas? A ver si tengo ñ y Ñ, no vaya a sér que luego ná.",
     }
 
     render() {
         return (
             <div className="app">
-                <Alert message={this.state.alertMessage} />
+                <Alert {...this.state.alert} />
                 <Menu notifications={this.state.workCompleted} />
                 <Status {...this.state.status} />
                 <Office />

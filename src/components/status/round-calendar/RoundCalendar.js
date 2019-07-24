@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "./RoundCalendar.scss";
 
 const RoundCalendar = (props) => {
-    
+
     const DAYS_PER_GAME_MONTH = 7;
     const HOURS_PER_GAME_MONTH = 24 * DAYS_PER_GAME_MONTH;
     const HOURS_PER_GAME_DAYS = HOURS_PER_GAME_MONTH / 30;

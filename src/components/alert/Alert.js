@@ -5,31 +5,27 @@ import "./Alert.scss";
 
 const Alert = (props) => {
 
-    let msg = props.message;
-
-    const getDisplay = () => {
-        return !msg ? "flex" : "none";
-    }
-
-    const Close = (e) => {
+    const onClose = (e) => {
         e.preventDefault();
-        msg = undefined;
-    };
+        props.callback();
+    }
 
     return (
         <div
             className="alert__overlay"
-            style={{display: getDisplay() }}>
+            style={{display: props.show ? "flex" : "none" }}>
             <div className="alert__window">
-                <button onClick={Close}></button>
-                <p>{ msg }</p>
+                <button onClick={ onClose }></button>
+                <p>{ props.message }</p>
             </div>
         </div>
     );
 };
 
 Alert.propTypes = {
-    message: PropTypes.string
+    message: PropTypes.string.isRequired,
+    show: PropTypes.bool.isRequired,
+    callback: PropTypes.func
 };
 
 export default Alert;

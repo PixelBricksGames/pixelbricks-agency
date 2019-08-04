@@ -21,7 +21,9 @@ class App extends Component {
         alert: {
             message: "ola ke ase, ke dise amigo, te vienes a por unas mistas ricas? A ver si tengo ñ y Ñ, no vaya a sér que luego ná.",
             show: true,
-            callback: () => { console.log("ola ke ase") }
+            callback: () => {
+                console.log("ola");
+            }
         },
         workCompleted: 2,
     }

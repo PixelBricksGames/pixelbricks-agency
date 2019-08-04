@@ -3,21 +3,21 @@ import PropTypes from "prop-types";
 
 import "./MenuButton.scss";
 
-const MenuButton = (props) => {
+const MenuButton = ({ id, notifications, click, hover }) => {
 
     const MAX_NOTIFICATIONS_VALUE = "!";
     let notificationsTemplate;
 
-    if (props.notifications && props.notifications !== 0) {
-        let value = props.notifications < 10 ? props.notifications : MAX_NOTIFICATIONS_VALUE;
+    if (notifications && notifications !== 0) {
+        let value = notifications < 10 ? notifications : MAX_NOTIFICATIONS_VALUE;
         notificationsTemplate = <div className="menu-button__notification">{value}</div>;
     }
 
     return (
         <button
-            className={`menu-button menu__button--${props.id}`}
-            onClick={props.click}
-            onMouseOver={props.hover}
+            className={`menu-button menu__button--${id}`}
+            onClick={click}
+            onMouseOver={hover}
         >
             { notificationsTemplate }
         </button>

@@ -6,22 +6,22 @@ import InfoBar from "./info-bar/InfoBar";
 
 import "./Status.scss";
 
-const Status = (props) => {
+const Status = ({ date, reputation, karma, happiness, quality, money }) => {
 
     return (
         <section className="status">
-            <RoundCalendar date={props.date}/>
+            <RoundCalendar date={date}/>
             <div className="status__labels">
-                <div className={`icon__reputation--${props.karma >= 0 ? "good" : "bad"}`}></div>
-                <div className={`icon__happiness--${props.happiness > 66 ? "good" : props.happiness < 33 ? "bad" : "neutral"}`}></div>
-                <div className={`icon__quality--${props.quality >= 50 ? "good" : "bad"}`}></div>
+                <div className={`icon__reputation--${karma >= 0 ? "good" : "bad"}`}></div>
+                <div className={`icon__happiness--${happiness > 66 ? "good" : happiness < 33 ? "bad" : "neutral"}`}></div>
+                <div className={`icon__quality--${quality >= 50 ? "good" : "bad"}`}></div>
                 <div className="icon__money"></div>
             </div>
             <div className="status__info">
-                <InfoBar value={`${props.reputation}(${props.karma > 0 ? "+" : ""}${props.karma})`}/>
-                <InfoBar value={`${props.happiness}`} percentage={true} />
-                <InfoBar value={`${props.quality}`} percentage={true} />
-                <InfoBar value={`${props.money}`} />
+                <InfoBar value={`${reputation}(${karma > 0 ? "+" : ""}${karma})`}/>
+                <InfoBar value={`${happiness}`} percentage={true} />
+                <InfoBar value={`${quality}`} percentage={true} />
+                <InfoBar value={`${money}`} />
             </div>
         </section>
     );

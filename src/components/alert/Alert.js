@@ -1,26 +1,41 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
-
 import "./Alert.scss";
 
-const Alert = (props) => {
+class Alert extends Component {
 
-    const onClose = (e) => {
-        e.preventDefault();
-        props.callback();
+    state = {
+        alert: {
+            message: this.props.message,
+            show: this.props.show,
+            callback: this.props.callback
+        },
     }
 
-    return (
-        <div
-            className="alert__overlay"
-            style={{display: props.show ? "flex" : "none" }}>
-            <div className="alert__window">
-                <button onClick={ onClose }></button>
-                <p>{ props.message }</p>
+    onClose = (e) => {
+        e.preventDefault();
+        this.setState({
+            alert: {
+                message: "",
+                show: false
+            }
+        });
+        this.state.alert.callback();
+    }
+
+    render() {
+        return (
+            <div
+                className="alert__overlay"
+                style={{display: this.state.alert.show ? "flex" : "none" }}>
+                <div className="alert__window">
+                    <button onClick={ this.onClose }></button>
+                    <p>{ this.state.alert.message }</p>
+                </div>
             </div>
-        </div>
-    );
-};
+        );
+    }
+}
 
 Alert.propTypes = {
     message: PropTypes.string.isRequired,

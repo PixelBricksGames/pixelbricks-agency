@@ -12,6 +12,13 @@ const Constants = {
         10: "OCT",
         11: "NOV",
         12: "DIC",
+    },
+    MENU_WINDOW: {
+        CONFIG: {
+            AGENCY: "RED",
+            PROJECTS: "GREEN",
+            EMPLOYEE: "BLUE",
+        }
     }
 };
 

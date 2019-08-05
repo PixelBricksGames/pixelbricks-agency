@@ -1,0 +1,54 @@
+@import "./../../assets/fonts/pressstart2p/stylesheet.css";
+@import "./../../styles/variables.scss";
+@import "./../../styles/mixins/image-sharp-edges.scss";
+
+$URL_ASSETS: "./../../assets/";
+$URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
+
+$OVERLAY_MIN_WIDTH: $GAME_MIN_WIDTH;
+
+.game-window {
+    &__overlay {
+        align-items: center;
+        background-color: transparent;
+        display: none;
+        height: 100%;
+        justify-content: center;
+        left: 0;
+        min-width: $OVERLAY_MIN_WIDTH + px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    &__window {
+        @extend %image-sharp-edges;
+        border: 9px solid;
+        box-sizing: border-box;
+        width: 90%;
+        max-width: 800px;
+        min-height: 200px;
+        border-image: url($URL_ASSETS_IMAGES + "alert/alert-bg.png");
+        border-image-slice: 4 fill;
+        position: relative;
+
+        button {
+            background-color: #00000055;
+            background-image: url($URL_ASSETS_IMAGES + "alert/alert-bt.png");
+            border: 0;
+            display: block;
+            height: 27px;
+            position: absolute;
+            right: 10px;
+            width: 27px;
+            &:hover { background-image: url($URL_ASSETS_IMAGES + "alert/alert-bt-hover.png"); }
+            &:active { background-color: #000000BB; }
+        }
+
+        p {
+            font-family: "press_start_2pregular";
+            margin: 30px 10px;
+        }
+    }
+}

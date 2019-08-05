@@ -7,7 +7,6 @@ class Alert extends Component {
     state = {
         alert: {
             message: this.props.message,
-            show: this.props.show,
             callback: this.props.callback
         },
     }
@@ -15,10 +14,7 @@ class Alert extends Component {
     onClose = (e) => {
         e.preventDefault();
         this.setState({
-            alert: {
-                message: "",
-                show: false
-            }
+            alert: {}
         });
         this.state.alert.callback();
     }
@@ -27,7 +23,7 @@ class Alert extends Component {
         return (
             <div
                 className="alert__overlay"
-                style={{display: this.state.alert.show ? "flex" : "none" }}>
+                style={{display: this.state.alert.message ? "flex" : "none" }}>
                 <div className="alert__window">
                     <button onClick={ this.onClose }></button>
                     <p>{ this.state.alert.message }</p>
@@ -39,7 +35,6 @@ class Alert extends Component {
 
 Alert.propTypes = {
     message: PropTypes.string.isRequired,
-    show: PropTypes.bool.isRequired,
     callback: PropTypes.func
 };
 

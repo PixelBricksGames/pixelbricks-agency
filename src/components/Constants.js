@@ -13,7 +13,7 @@ const Constants = {
         11: "NOV",
         12: "DIC",
     },
-    MENU_WINDOW: {
+    GAME_WINDOW: {
         CONFIG: {
             AGENCY: "RED",
             PROJECTS: "GREEN",

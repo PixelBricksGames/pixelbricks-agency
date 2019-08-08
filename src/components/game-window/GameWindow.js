@@ -22,12 +22,10 @@ class GameWindow extends Component {
     render() {
         return (
             <div
-                className="game-window__overlay"
+                className="game-window"
                 style={{display: this.state.gameWindow.type ? "flex" : "none" }}>
-                <div className="game-window__window">
-                    <button onClick={ this.onClose }></button>
-                    <p>Ola ke ase</p>
-                </div>
+                <button onClick={ this.onClose }></button>
+                <p>Ola ke ase</p>
             </div>
         );
     }

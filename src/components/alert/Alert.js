@@ -22,12 +22,10 @@ class Alert extends Component {
     render() {
         return (
             <div
-                className="alert__overlay"
+                className="alert"
                 style={{display: this.state.alert.message ? "flex" : "none" }}>
-                <div className="alert__window">
-                    <button onClick={ this.onClose }></button>
-                    <p>{ this.state.alert.message }</p>
-                </div>
+                <button onClick={ this.onClose }></button>
+                <p>{ this.state.alert.message }</p>
             </div>
         );
     }

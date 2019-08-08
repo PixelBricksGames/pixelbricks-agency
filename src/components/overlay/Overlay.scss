@@ -1,0 +1,16 @@
+@import "./../../styles/variables.scss";
+
+$OVERLAY_MIN_WIDTH: $GAME_MIN_WIDTH;
+
+.overlay {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    min-width: $OVERLAY_MIN_WIDTH + px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+}

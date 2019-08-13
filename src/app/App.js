@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import Constants from "./shared/Constants";
 
 import Menu from "./components/menu/Menu";
@@ -8,9 +7,15 @@ import Office from "./components/office/Office";
 import Alert from "./components/alert/Alert";
 import GameWindow from "./components/game-window/GameWindow";
 
+import { alert } from "./state/reducers/alert.reducer";
 import "./App.scss";
 
 class App extends Component {
+
+    // store = createStore(alert);
+    ola = () => {
+        console.log( store.getState() );
+    }
 
     state = {
         status: {

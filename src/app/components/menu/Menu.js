@@ -1,69 +1,80 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import MenuButton from "./button/MenuButton";
 
 import "./Menu.scss";
 
-const Menu = (props) => {
+class Menu extends Component {
 
-    const OpenMenuAgency = () => {
+    state = {
+    }
+
+    openMenuAgency = (e) => {
         console.log("Open Menu Agency");
     }
 
-    const OpenMenuProjects = () => {
+    openMenuProjects = (e) => {
         console.log("Open Menu Projects");
     }
 
-    const OpenMenuEmployees = () => {
+    openMenuEmployees = (e) => {
         console.log("Open Menu Employees");
     }
 
-    const OpenMenuSearchProjects = () => {
+    openMenuSearchProjects = (e) => {
         console.log("Open Menu SearchProjects");
     }
 
-    const OpenMenuSearchEmployees = () => {
+    openMenuSearchEmployees = (e) => {
         console.log("Open Menu SearchEmployees");
     }
 
-    const OpenMenuConfiguration = () => {
-        console.log("Open Menu Configuration");
+    openMenuConfiguration = (e) => {
+        // console.log("Open Menu Configuration");
+        e.preventDefault();
+        this.setState({
+            alert: {
+                message: "Sorry shurmano, pero no hay opciones todavía.",
+            }
+        });
     }
 
-    return (
-        <section className="menu">
-            <section className="menu--left">
-                <MenuButton
-                    id="agency"
-                    click={OpenMenuAgency}
-                />
-                <MenuButton
-                    id="projects"
-                    click={OpenMenuProjects}
-                    notifications={props.notifications}
-                />
-                <MenuButton
-                    id="employees"
-                    click={OpenMenuEmployees}
-                />
-                <MenuButton
-                    id="search-projects"
-                    click={OpenMenuSearchProjects}
-                />
-                <MenuButton
-                    id="search-employees"
-                    click={OpenMenuSearchEmployees}
-                />
+    render() {
+        return (
+            <section className="menu">
+                <section className="menu--left">
+                    <MenuButton
+                        id="agency"
+                        click={this.openMenuAgency}
+                    />
+                    <MenuButton
+                        id="projects"
+                        click={this.openMenuProjects}
+                        notifications={this.props.notifications}
+                    />
+                    <MenuButton
+                        id="employees"
+                        click={this.openMenuEmployees}
+                    />
+                    <MenuButton
+                        id="search-projects"
+                        click={this.openMenuSearchProjects}
+                    />
+                    <MenuButton
+                        id="search-employees"
+                        click={this.openMenuSearchEmployees}
+                    />
+                </section>
+                <section className="menu--right">
+                    <MenuButton
+                        id="configuration"
+                        click={this.openMenuConfiguration}
+                    />
+                </section>
             </section>
-            <section className="menu--right">
-                <MenuButton
-                    id="configuration"
-                    click={OpenMenuConfiguration}
-                />
-            </section>
-        </section>
-    );
+        );
+    }
 }
 
 Menu.propTypes = {

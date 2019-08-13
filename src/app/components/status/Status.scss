@@ -1,9 +1,9 @@
-@import "./../../assets/fonts/pressstart2p/stylesheet.css";
-@import "./../../styles/variables.scss";
-@import "./../../styles/colors.scss";
-@import "./../../styles/mixins/image-sharp-edges.scss";
+@import "./../../../assets/fonts/pressstart2p/stylesheet.css";
+@import "./../../../styles/variables.scss";
+@import "./../../../styles/colors.scss";
+@import "./../../../styles/mixins/image-sharp-edges.scss";
 
-$URL_ASSETS: "./../../assets/";
+$URL_ASSETS: "./../../../assets/";
 $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 $DSKTP_BREAKPOINT: $DESKTOP_BREAKPOINT;
 

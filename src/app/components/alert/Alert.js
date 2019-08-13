@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+
+import Overlay from "../overlay/Overlay";
+
 import "./Alert.scss";
 
 class Alert extends Component {
@@ -21,12 +24,17 @@ class Alert extends Component {
 
     render() {
         return (
-            <div
-                className="alert"
-                style={{display: this.state.alert.message ? "flex" : "none" }}>
-                <button onClick={ this.onClose }></button>
-                <p>{ this.state.alert.message }</p>
-            </div>
+            <Overlay
+                display={this.state.alert.message ? "flex" : "none"}
+                opacity="99"
+                depth={200}>
+
+                <div className="alert">
+                    <button onClick={ this.onClose }></button>
+                    <p>{ this.state.alert.message }</p>
+                </div>
+
+            </Overlay>
         );
     }
 }

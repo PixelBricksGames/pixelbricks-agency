@@ -1,4 +1,4 @@
-@import "./../../styles/variables.scss";
+@import "./../../../styles/variables.scss";
 
 $OVERLAY_MIN_WIDTH: $GAME_MIN_WIDTH;
 
@@ -12,5 +12,4 @@ $OVERLAY_MIN_WIDTH: $GAME_MIN_WIDTH;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 200;
 }

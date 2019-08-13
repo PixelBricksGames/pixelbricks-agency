@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+import Overlay from "./../overlay/Overlay";
 
 import "./GameWindow.scss";
 
@@ -21,12 +23,17 @@ class GameWindow extends Component {
 
     render() {
         return (
-            <div
-                className="game-window"
-                style={{display: this.state.gameWindow.type ? "flex" : "none" }}>
-                <button onClick={ this.onClose }></button>
-                <p>Ola ke ase</p>
-            </div>
+            <Overlay
+                display={this.state.gameWindow.type ? "flex" : "none"}
+                opacity="33"
+                depth={100}>
+
+                <div className="game-window" >
+                    <button onClick={ this.onClose }></button>
+                    <p>Ola ke ase</p>
+                </div>
+
+            </Overlay>
         );
     }
 }

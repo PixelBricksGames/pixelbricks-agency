@@ -1,8 +1,8 @@
-@import "./../../assets/fonts/pressstart2p/stylesheet.css";
-@import "./../../styles/variables.scss";
-@import "./../../styles/colors.scss";
+@import "./../../../assets/fonts/pressstart2p/stylesheet.css";
+@import "./../../../styles/variables.scss";
+@import "./../../../styles/colors.scss";
 
-$URL_ASSETS: "./../../assets/";
+$URL_ASSETS: "./../../../assets/";
 $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
 $MENU_MIN_WIDTH: $GAME_MIN_WIDTH;

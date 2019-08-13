@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 
-import Constants from "./Constants";
+import Constants from "./shared/Constants";
 
-import Menu from "./menu/Menu";
-import Status from "./status/Status";
-import Office from "./office/Office";
-import Overlay from "./overlay/Overlay";
-import Alert from "./alert/Alert";
-import GameWindow from "./game-window/GameWindow";
+import Menu from "./components/menu/Menu";
+import Status from "./components/status/Status";
+import Office from "./components/office/Office";
+import Alert from "./components/alert/Alert";
+import GameWindow from "./components/game-window/GameWindow";
 
 import "./App.scss";
 
@@ -47,10 +46,8 @@ class App extends Component {
     render() {
         return (
             <div className="app">
-                <Overlay {...this.state}>
-                    <Alert {...this.state.alert} />
-                    <GameWindow  {...this.state.gameWindow} />
-                </Overlay>
+                <Alert {...this.state.alert} />
+                <GameWindow  {...this.state.gameWindow} />
                 <Menu notifications={this.state.workCompleted} />
                 <Status {...this.state.status} />
                 <Office />

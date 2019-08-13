@@ -1,7 +1,7 @@
-@import "./../../assets/fonts/pressstart2p/stylesheet.css";
-@import "./../../styles/mixins/image-sharp-edges.scss";
+@import "./../../../assets/fonts/pressstart2p/stylesheet.css";
+@import "./../../../styles/mixins/image-sharp-edges.scss";
 
-$URL_ASSETS: "./../../assets/";
+$URL_ASSETS: "./../../../assets/";
 $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
 .game-window {

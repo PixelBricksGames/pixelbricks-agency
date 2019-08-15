@@ -1,0 +1,24 @@
+{
+	"editor.detectIndentation": false,
+	"editor.formatOnPaste": false,
+	"editor.formatOnSave": false,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 4,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"html.format.wrapAttributes": "force-expand-multiline",
+	"html.format.wrapLineLength": 140,
+	"javascript.implicitProjectConfig.experimentalDecorators": true,
+	"javascript.preferences.quoteStyle": "double",
+	"liveServer.settings.donotShowInfoMsg": true,
+	"prettier.jsxSingleQuote": false,
+	"prettier.printWidth": 140,
+	"prettier.singleQuote": false,
+	"prettier.tabWidth": 4,
+	"turboConsoleLog.quote": "'",
+	"vsicons.projectDetection.autoReload": true,
+	"workbench.iconTheme": "vscode-icons",
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	}
+}

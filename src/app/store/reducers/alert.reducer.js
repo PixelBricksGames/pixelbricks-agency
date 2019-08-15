@@ -1,18 +1,17 @@
-// import * as reducerType from '../../unit/reducerType';
-// import { lastRecord } from '../../unit/const';
+import * as reducerType from '../reducer.type';
 
 const initState = {
-    message: "",
-    callback: () => {}
+	message: "",
+	callback: () => {}
 };
 
 const alert = (state = initState, action) => {
-    switch (action.type) {
-    case reducerType.RESET:
-        return action.data;
-    default:
-        return state;
-    }
+	switch (action.type) {
+		case reducerType.ALERT:
+			return action.data;
+		default:
+			return state;
+	}
 };
 
-export default aler;
+export default alert;

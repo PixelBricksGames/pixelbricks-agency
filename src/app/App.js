@@ -30,8 +30,10 @@ class App extends Component {
             type: Constants.GAME_WINDOW.CONFIG.EMPLOYEE,
             tabs: {},
             list: {}
-        },
-        workCompleted: 2,
+		},
+		menu: {
+			workCompleted: 2,
+		}
     }
 
     closeAlert = (e) => {

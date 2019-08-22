@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import Constants from "../../shared/Constants";
+import constants from "../../shared/constants";
 import Overlay from "../overlay/Overlay";
 
 import "./Alert.scss";

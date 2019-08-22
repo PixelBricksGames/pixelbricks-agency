@@ -1,4 +1,4 @@
-const Constants = {
+const constants = {
     MONTHS: {
         1: "ENE",
         2: "FEB",

@@ -1,4 +1,4 @@
-import * as reducerType from '../reducer.type';
+import * as reducerType from './../../unit/reducer.type';
 
 const initState = {
 	type: "",

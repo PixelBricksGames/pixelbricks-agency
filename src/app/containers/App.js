@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Constants from "../shared/Constants";
+import constants from "../shared/constants";
 
 import Menu from "../components/menu/Menu";
 import Status from "../components/status/Status";

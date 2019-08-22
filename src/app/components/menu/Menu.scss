@@ -17,7 +17,7 @@ $MENU_MIN_WIDTH: $GAME_MIN_WIDTH;
     padding: 10px 8px;
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: $Z_INDEX_UI;
 
     %menu__side {
         height: 50px;

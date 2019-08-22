@@ -14,7 +14,7 @@ $DSKTP_BREAKPOINT: $DESKTOP_BREAKPOINT;
     min-width: 280px;
     position: relative;
     padding: 0 10px;
-    z-index: 100;
+    z-index: $Z_INDEX_UI;
 
     @media screen and (min-width: $DSKTP_BREAKPOINT) {
         position: absolute;

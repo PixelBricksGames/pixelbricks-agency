@@ -12,7 +12,6 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
     min-height: 200px;
     position: absolute;
     width: 90%;
-    z-index: 200;
     border-image: url($URL_ASSETS_IMAGES + "alert/alert-bg.png");
     border-image-slice: 4 fill;
 

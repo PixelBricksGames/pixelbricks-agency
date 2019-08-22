@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import Constants from "../../shared/Constants";
 import Overlay from "../overlay/Overlay";
 
 import "./Alert.scss";
@@ -27,7 +28,7 @@ class Alert extends Component {
             <Overlay
                 display={this.state.alert.message ? "flex" : "none"}
                 opacity="99"
-                depth={200}>
+                depth={Constants.Z_INDEX.Z_UI_OVER}>
 
                 <div className="alert">
                     <button onClick={ this.onClose }></button>

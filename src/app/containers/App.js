@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Constants from "./shared/Constants";
+import Constants from "../shared/Constants";
 
-import Menu from "./components/menu/Menu";
-import Status from "./components/status/Status";
-import Office from "./components/office/Office";
-import Alert from "./components/alert/Alert";
-import GameWindow from "./components/game-window/GameWindow";
+import Menu from "../components/menu/Menu";
+import Status from "../components/status/Status";
+import Office from "../components/office/Office";
+import Alert from "../components/alert/Alert";
+import GameWindow from "../components/game-window/GameWindow";
 
 import "./App.scss";
 
@@ -49,7 +49,7 @@ class App extends Component {
             <div className="app">
                 <Alert {...this.state.alert} />
                 <GameWindow  {...this.state.gameWindow} />
-                <Menu notifications={this.state.workCompleted} />
+                <Menu notifications={this.state.menu.workCompleted} />
                 <Status {...this.state.status} />
                 <Office />
             </div>

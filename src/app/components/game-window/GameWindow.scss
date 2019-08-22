@@ -14,7 +14,6 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
     border-image: url($URL_ASSETS_IMAGES + "alert/alert-bg.png");
     border-image-slice: 4 fill;
     position: absolute;
-    z-index: 100;
 
     button {
         background-color: #00000055;

@@ -19,7 +19,12 @@ const Constants = {
             PROJECTS: "GREEN",
             EMPLOYEE: "BLUE",
         }
-    }
+	},
+	Z_INDEX: {
+		Z_UI: 100,
+		Z_UI_ON: 200,
+		Z_UI_OVER: 300,
+	},
 };
 
 export default Constants;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import constants from "../shared/constants";
+import constants from "../units/constants";
 
 import Menu from "../components/menu/Menu";
 import Status from "../components/status/Status";
@@ -27,7 +27,7 @@ class App extends Component {
             }
         },
         gameWindow: {
-            type: Constants.GAME_WINDOW.CONFIG.EMPLOYEE,
+            type: constants.GAME_WINDOW.CONFIG.EMPLOYEE,
             tabs: {},
             list: {}
 		},

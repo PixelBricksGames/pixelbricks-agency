@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import constants from "../../shared/constants";
+import constants from "../../units/constants";
 import Overlay from "./../overlay/Overlay";
 
 import "./GameWindow.scss";
@@ -28,7 +28,7 @@ class GameWindow extends Component {
             <Overlay
                 display={this.state.gameWindow.type ? "flex" : "none"}
                 opacity="33"
-                depth={Constants.Z_INDEX.Z_UI_ON}>
+                depth={constants.Z_INDEX.Z_UI_ON}>
 
                 <div className="game-window" >
                     <button onClick={ this.onClose }></button>

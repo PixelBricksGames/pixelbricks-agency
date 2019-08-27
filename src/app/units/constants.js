@@ -27,4 +27,4 @@ const constants = {
 	},
 };
 
-export default Constants;
+export default constants;

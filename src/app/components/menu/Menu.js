@@ -5,10 +5,50 @@ import MenuButton from "./button/MenuButton";
 
 import "./Menu.scss";
 
+const Menu = ({ notifications }) => {
+	const onClick = () => {
+		console.log("click");
+	};
+    return (
+        <section className="menu">
+                <section className="menu--left">
+                    <MenuButton
+                        id="agency"
+                        click={onClick}
+                    />
+                    <MenuButton
+                        id="projects"
+                        click={onClick}
+                        notifications={notifications}
+                    />
+                    <MenuButton
+                        id="employees"
+                        click={onClick}
+                    />
+                    <MenuButton
+                        id="search-projects"
+                        click={onClick}
+                    />
+                    <MenuButton
+                        id="search-employees"
+                        click={onClick}
+                    />
+                </section>
+                <section className="menu--right">
+                    <MenuButton
+                        id="configuration"
+                        click={onClick}
+                    />
+                </section>
+            </section>
+    );
+}
+
+/*
 class Menu extends Component {
 
-    state = {
-    }
+    // state = {
+    // }
 
     openMenuAgency = (e) => {
         console.log("Open Menu Agency");
@@ -33,11 +73,11 @@ class Menu extends Component {
     openMenuConfiguration = (e) => {
         // console.log("Open Menu Configuration");
         e.preventDefault();
-        this.setState({
-            alert: {
-                message: "Sorry shurmano, pero no hay opciones todavía.",
-            }
-        });
+        // this.setState({
+        //     alert: {
+        //         message: "Sorry shurmano, pero no hay opciones todavía.",
+        //     }
+        // });
     }
 
     render() {
@@ -76,6 +116,7 @@ class Menu extends Component {
         );
     }
 }
+*/
 
 Menu.propTypes = {
     notifications: PropTypes.number

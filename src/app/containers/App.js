@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import constants from "../units/constants";
 
-import Menu from "../components/menu/Menu";
+import MenuManager from "./MenuManager";
 import Status from "../components/status/Status";
 import Office from "../components/office/Office";
 import Alert from "../components/alert/Alert";
@@ -30,9 +30,6 @@ class App extends Component {
             type: constants.GAME_WINDOW.CONFIG.EMPLOYEE,
             tabs: {},
             list: {}
-		},
-		menu: {
-			workCompleted: 2,
 		}
     }
 
@@ -49,7 +46,7 @@ class App extends Component {
             <div className="app">
                 <Alert {...this.state.alert} />
                 <GameWindow  {...this.state.gameWindow} />
-                <Menu notifications={this.state.menu.workCompleted} />
+                <MenuManager />
                 <Status {...this.state.status} />
                 <Office />
             </div>

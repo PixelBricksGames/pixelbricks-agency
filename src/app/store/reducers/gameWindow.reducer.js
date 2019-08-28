@@ -4,7 +4,7 @@ import * as initState from './../../units/init.state';
 const gameWindow = (state = initState.gameWindow, action) => {
 	switch (action.type) {
 		case reducerType.GAME_WINDOW:
-			return action.data;
+			return action.gameWindow;
 		default:
 			return state;
 	}

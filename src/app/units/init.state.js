@@ -10,7 +10,7 @@ export const gameWindow = {
 };
 
 export const menu = {
-	workCompleted: 0
+	workCompleted: 2
 };
 
 export const status = {

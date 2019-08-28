@@ -4,7 +4,7 @@ import * as initState from './../../units/init.state';
 const status = (state = initState.status, action) => {
 	switch (action.type) {
 		case reducerType.STATUS:
-			return action.data;
+			return action.status;
 		default:
 			return state;
 	}

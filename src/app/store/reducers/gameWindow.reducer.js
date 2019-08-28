@@ -1,12 +1,7 @@
-import * as reducerType from './../../unit/reducer.type';
+import * as reducerType from './../../units/reducer.type';
+import * as initState from './../../units/init.state';
 
-const initState = {
-	type: "",
-    tabs: {},
-    list: {}
-};
-
-const gameWindow = (state = initState, action) => {
+const gameWindow = (state = initState.gameWindow, action) => {
 	switch (action.type) {
 		case reducerType.GAME_WINDOW:
 			return action.data;

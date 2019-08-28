@@ -1,15 +1,7 @@
-import * as reducerType from './../../unit/reducer.type';
+import * as reducerType from './../../units/reducer.type';
+import * as initState from './../../units/init.state';
 
-const initState = {
-	date: new Date(),
-    reputation: 0,
-    karma: 0,
-    happiness: 0,
-    quality: 0,
-    money: 0
-};
-
-const status = (state = initState, action) => {
+const status = (state = initState.status, action) => {
 	switch (action.type) {
 		case reducerType.STATUS:
 			return action.data;

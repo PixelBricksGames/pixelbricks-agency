@@ -1,10 +1,7 @@
-import * as reducerType from './../../unit/reducer.type';
+import * as reducerType from './../../units/reducer.type';
+import * as initState from './../../units/init.state';
 
-const initState = {
-	workCompleted: 0
-};
-
-const menu = (state = initState, action) => {
+const menu = (state = initState.menu, action) => {
 	switch (action.type) {
 		case reducerType.MENU:
 			return action.data;

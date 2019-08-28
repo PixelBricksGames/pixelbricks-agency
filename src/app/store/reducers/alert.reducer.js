@@ -1,11 +1,7 @@
-import * as reducerType from './../../unit/reducer.type';
+import * as reducerType from './../../units/reducer.type';
+import * as initState from './../../units/init.state';
 
-const initState = {
-	message: "",
-	callback: () => {}
-};
-
-const alert = (state = initState, action) => {
+const alert = (state = initState.alert, action) => {
 	switch (action.type) {
 		case reducerType.ALERT:
 			return action.data;

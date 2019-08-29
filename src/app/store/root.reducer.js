@@ -1,4 +1,5 @@
-import { combineReducers } from "redux-immutable";
+import { combineReducers } from "redux";
+// import { combineReducers } from "redux-immutable";
 
 import alert from "./reducers/alert.reducer";
 import gameWindow from "./reducers/gameWindow.reducer";

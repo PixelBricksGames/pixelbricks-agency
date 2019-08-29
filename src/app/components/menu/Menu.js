@@ -119,7 +119,7 @@ class Menu extends Component {
 */
 
 Menu.propTypes = {
-    notifications: PropTypes.number
+    notifications: PropTypes.number.isRequired
 };
 
 export default Menu;

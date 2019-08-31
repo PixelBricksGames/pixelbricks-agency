@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 // import constants from "../../units/constants";
 
 import MenuManager from "../../containers/MenuManager";
@@ -7,9 +7,9 @@ import Office from "../office/Office";
 import Alert from "../alert/Alert";
 import GameWindow from "../game-window/GameWindow";
 
-import "./App.scss";
+import "./Root.scss";
 
-const App = () => (
+const Root = () => (
     <div className="app">
 		<MenuManager />
 		<Office />
@@ -61,4 +61,4 @@ const App = () => (
 //     }
 // }
 
-export default App;
+export default Root;

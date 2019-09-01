@@ -1,21 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-import constants from "./../../units/constants";
 import Overlay from "./../overlay/Overlay";
+import { Z_INDEX } from "./../../units/constants";
 
 import "./GameWindow.scss";
 
-const onClose = (e) => {
-	e.preventDefault();
-	console.log("closeGameWindow");
-}
-
-const GameWindow = ({type, tabs, list}) => (
+const GameWindow = ({type, tabs, list, onClose}) => (
 	<Overlay
 		display={type ? "flex" : "none"}
 		opacity="00"
-		depth={constants.Z_INDEX.Z_UI_ON}
+		depth={Z_INDEX.UI_ON}
 		noClickable={true}>
 
 		<div className="game-window" >
@@ -27,9 +22,10 @@ const GameWindow = ({type, tabs, list}) => (
 );
 
 GameWindow.propTypes = {
-    type: PropTypes.string.isRequired,
-	tabs: PropTypes.array.isRequired,
-	list: PropTypes.array.isRequired
+    type: PropTypes.string,
+	tabs: PropTypes.array,
+	list: PropTypes.array,
+	onClose: PropTypes.func.isRequired
 };
 
 export default GameWindow;

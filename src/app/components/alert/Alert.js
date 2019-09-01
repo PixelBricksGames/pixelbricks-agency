@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import constants from "./../../units/constants";
 import Overlay from "./../overlay/Overlay";
+import { Z_INDEX } from "./../../units/constants";
 
 import "./Alert.scss";
 
@@ -10,11 +10,11 @@ const Alert = ({message, onClose}) => (
 	<Overlay
 		display={message ? "flex" : "none"}
 		opacity="99"
-		depth={constants.Z_INDEX.Z_UI_OVER}>
+		depth={Z_INDEX.UI_OVER}>
 
 		<div className="alert">
 			<button onClick={onClose}></button>
-			<p>{message }</p>
+			<p>{message}</p>
 		</div>
 
 	</Overlay>
@@ -22,7 +22,7 @@ const Alert = ({message, onClose}) => (
 
 Alert.propTypes = {
     message: PropTypes.string,
-    callback: PropTypes.func
+    onClose: PropTypes.func.isRequired
 };
 
 export default Alert;

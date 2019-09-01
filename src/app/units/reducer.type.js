@@ -1,4 +1,9 @@
-export const ALERT_UPDATE = "ALERT_UPDATE";
+export const ALERT_OPEN = "ALERT_OPEN";
+export const ALERT_CLOSE = "ALERT_CLOSE";
+
 export const GAME_WINDOW_UPDATE = "GAME_WINDOW_UPDATE";
+export const GAME_WINDOW_CLOSE = "GAME_WINDOW_CLOSE";
+
 export const MENU_UPDATE = "MENU_UPDATE";
+
 export const STATUS_UPDATE = "STATUS_UPDATE";

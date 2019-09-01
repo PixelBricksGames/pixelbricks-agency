@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Alert from "./../components/alert/Alert";
-import { updateAlert } from "./../store/actions/alert.action";
+import { closeAlert } from "./../store/actions/alert.action";
 
 let callback;
 
@@ -12,7 +12,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
 	onClose: () => {
 		callback();
-		return dispatch(updateAlert({}));
+		return dispatch(closeAlert());
 	}
 });
 

@@ -1,4 +1,9 @@
-export const updateAlert = alert => ({
-	type: "ALERT_UPDATE",
+export const openAlert = alert => ({
+	type: "ALERT_OPEN",
 	alert
+});
+
+export const closeAlert = () => ({
+	type: "ALERT_CLOSE",
+	alert: {}
 });

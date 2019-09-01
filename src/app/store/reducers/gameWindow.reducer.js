@@ -5,6 +5,8 @@ const gameWindow = (state = initState.gameWindow, action) => {
 	switch (action.type) {
 		case reducerType.GAME_WINDOW_UPDATE:
 			return action.gameWindow;
+		case reducerType.GAME_WINDOW_CLOSE:
+			return action.gameWindow;
 		default:
 			return state;
 	}

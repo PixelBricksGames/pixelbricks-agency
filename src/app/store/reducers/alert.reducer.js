@@ -3,7 +3,9 @@ import * as initState from "./../../units/test.state";
 
 const alert = (state = initState.alert, action) => {
 	switch (action.type) {
-		case reducerType.ALERT_UPDATE:
+		case reducerType.ALERT_OPEN:
+			return action.alert;
+		case reducerType.ALERT_CLOSE:
 			return action.alert;
 		default:
 			return state;

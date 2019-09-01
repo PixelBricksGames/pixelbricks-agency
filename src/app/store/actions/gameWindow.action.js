@@ -5,7 +5,9 @@ export const updateGameWindow = gameWindow => ({
 
 export const closeGameWindow = () => ({
 	type: "GAME_WINDOW_CLOSE",
-	gameWindow: {
-		type: undefined
-	}
+	gameWindow: {}
+});
+
+export const openAgencyWindow = () => ({
+	type: "GAME_WINDOW_OPEN_AGENCY"
 });

@@ -3,6 +3,12 @@ export const alert = {
 	callback: () => {}
 };
 
+export const game = {
+	agency: {},
+    projects: [],
+    employees: []
+};
+
 export const gameWindow = {
 	type: "",
     tabs: [],

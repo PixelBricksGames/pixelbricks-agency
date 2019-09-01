@@ -1,5 +1,5 @@
 import * as reducerType from './../../units/reducer.type';
-import * as initState from './../../units/init.state';
+import * as initState from './../../units/test.state';
 
 const alert = (state = initState.alert, action) => {
 	switch (action.type) {

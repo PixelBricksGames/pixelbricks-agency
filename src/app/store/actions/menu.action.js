@@ -1,4 +1,4 @@
 export const updateMenu = menu => ({
-	type: 'UPDATE_MENU',
+	type: 'MENU_UPDATE',
 	menu
 })

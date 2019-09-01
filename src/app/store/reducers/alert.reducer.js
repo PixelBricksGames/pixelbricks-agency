@@ -3,7 +3,7 @@ import * as initState from './../../units/init.state';
 
 const alert = (state = initState.alert, action) => {
 	switch (action.type) {
-		case reducerType.ALERT:
+		case reducerType.ALERT_UPDATE:
 			return action.alert;
 		default:
 			return state;

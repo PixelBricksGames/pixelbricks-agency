@@ -3,7 +3,7 @@ import * as initState from './../../units/init.state';
 
 const status = (state = initState.status, action) => {
 	switch (action.type) {
-		case reducerType.STATUS:
+		case reducerType.STATUS_UPDATE:
 			return action.status;
 		default:
 			return state;

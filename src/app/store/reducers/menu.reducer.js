@@ -3,7 +3,7 @@ import * as initState from './../../units/init.state';
 
 const menu = (state = initState.menu, action) => {
 	switch (action.type) {
-		case reducerType.UPDATE_MENU:
+		case reducerType.MENU_UPDATE:
 			return action.menu;
 		default:
 			return state;

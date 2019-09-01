@@ -1,4 +1,4 @@
-export const ALERT = "ALERT";
-export const GAME_WINDOW = "GAME_WINDOW";
-export const UPDATE_MENU = "UPDATE_MENU";
-export const STATUS = "STATUS";
+export const ALERT_UPDATE = "ALERT_UPDATE";
+export const GAME_WINDOW_UPDATE = "GAME_WINDOW_UPDATE";
+export const MENU_UPDATE = "MENU_UPDATE";
+export const STATUS_UPDATE = "STATUS_UPDATE";

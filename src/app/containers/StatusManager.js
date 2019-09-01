@@ -1,7 +1,7 @@
-import { connect } from 'react-redux';
-import Status from '../components/status/Status';
+import { connect } from "react-redux";
+import Status from "../components/status/Status";
 
-const mapStateToProps = state => state.get('status');
+const mapStateToProps = state => state.get("status");
 
 export default connect(
 	mapStateToProps

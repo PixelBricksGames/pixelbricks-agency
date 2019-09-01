@@ -1,47 +1,27 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-import constants from "../../units/constants";
-import Overlay from "../overlay/Overlay";
+import constants from "./../../units/constants";
+import Overlay from "./../overlay/Overlay";
 
 import "./Alert.scss";
 
-class Alert extends Component {
+const Alert = ({message, onClose}) => (
+	<Overlay
+		display={message ? "flex" : "none"}
+		opacity="99"
+		depth={constants.Z_INDEX.Z_UI_OVER}>
 
-    state = {
-        alert: {
-            message: this.props.message,
-            callback: this.props.callback
-        },
-    }
+		<div className="alert">
+			<button onClick={onClose}></button>
+			<p>{message }</p>
+		</div>
 
-    onClose = (e) => {
-        e.preventDefault();
-        this.setState({
-            alert: {}
-        });
-        this.state.alert.callback();
-    }
-
-    render() {
-        return (
-            <Overlay
-                display={this.state.alert.message ? "flex" : "none"}
-                opacity="99"
-                depth={constants.Z_INDEX.Z_UI_OVER}>
-
-                <div className="alert">
-                    <button onClick={ this.onClose }></button>
-                    <p>{ this.state.alert.message }</p>
-                </div>
-
-            </Overlay>
-        );
-    }
-}
+	</Overlay>
+);
 
 Alert.propTypes = {
-    message: PropTypes.string.isRequired,
+    message: PropTypes.string,
     callback: PropTypes.func
 };
 

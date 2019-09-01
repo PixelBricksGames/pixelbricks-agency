@@ -1,5 +1,5 @@
-import * as reducerType from './../../units/reducer.type';
-import * as initState from './../../units/test.state';
+import * as reducerType from "./../../units/reducer.type";
+import * as initState from "./../../units/test.state";
 
 const gameWindow = (state = initState.gameWindow, action) => {
 	switch (action.type) {

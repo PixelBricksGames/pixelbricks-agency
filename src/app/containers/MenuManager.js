@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
-import Menu from './../components/menu/Menu';
+import { connect } from "react-redux";
+import Menu from "./../components/menu/Menu";
 
 const mapStateToProps = state => ({
-	notifications: state.get('menu').workCompleted
+	notifications: state.get("menu").workCompleted
 });
 
 export default connect(

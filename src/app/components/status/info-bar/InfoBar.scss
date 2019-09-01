@@ -30,7 +30,7 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
     %info-bar__value--side {
         background-image: url($URL_ASSETS_IMAGES + "status/info-bar-sides.png");
-        content: '';
+        content: "";
         height: 100%;
         position: absolute;
         width: 5px;

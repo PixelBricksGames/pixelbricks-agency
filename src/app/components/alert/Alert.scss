@@ -1,19 +1,22 @@
 @import "./../../../assets/fonts/pressstart2p/stylesheet.css";
 @import "./../../../styles/mixins/image-sharp-edges.scss";
+@import "./../../../styles/variables.scss";
 
 $URL_ASSETS: "./../../../assets/";
 $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
 .alert {
     @extend %image-sharp-edges;
-    border: 9px solid;
     box-sizing: border-box;
     max-width: 800px;
     min-height: 200px;
     position: absolute;
-    width: 90%;
+	width: 90%;
+	z-index: $Z_INDEX_UI_OVER;
+
+    border: 9px solid;
     border-image: url($URL_ASSETS_IMAGES + "alert/alert-bg.png");
-    border-image-slice: 4 fill;
+	border-image-slice: 4 fill;
 
     button {
         background-color: #00000055;

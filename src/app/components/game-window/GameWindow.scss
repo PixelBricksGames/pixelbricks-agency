@@ -1,19 +1,23 @@
 @import "./../../../assets/fonts/pressstart2p/stylesheet.css";
 @import "./../../../styles/mixins/image-sharp-edges.scss";
+@import "./../../../styles/variables.scss";
 
 $URL_ASSETS: "./../../../assets/";
 $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
 .game-window {
     @extend %image-sharp-edges;
-    border: 9px solid;
     box-sizing: border-box;
-    width: 90%;
     max-width: 600px;
     min-height: 400px;
-    border-image: url($URL_ASSETS_IMAGES + "alert/alert-bg.png");
+	position: absolute;
+	pointer-events: auto;
+	width: 90%;
+	z-index: $Z_INDEX_UI_ON;
+
+    border: 9px solid;
+	border-image: url($URL_ASSETS_IMAGES + "alert/alert-bg.png");
     border-image-slice: 4 fill;
-    position: absolute;
 
     button {
         background-color: #00000055;

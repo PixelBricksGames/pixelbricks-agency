@@ -5,8 +5,8 @@ export const alert = {
 
 export const gameWindow = {
 	type: "",
-    tabs: {},
-    list: {}
+    tabs: [],
+    list: []
 };
 
 export const menu = {

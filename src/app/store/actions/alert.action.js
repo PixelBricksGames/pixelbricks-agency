@@ -1,4 +1,4 @@
 export const updateAlert = alert => ({
-	type: 'ALERT_UPDATE',
+	type: "ALERT_UPDATE",
 	alert
-})
+});

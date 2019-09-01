@@ -1,7 +1,7 @@
-import { connect } from 'react-redux';
-import GameWindow from '../components/game-window/GameWindow';
+import { connect } from "react-redux";
+import GameWindow from "../components/game-window/GameWindow";
 
-const mapStateToProps = state => state.get('gameWindow');
+const mapStateToProps = state => state.get("gameWindow");
 
 export default connect(
 	mapStateToProps

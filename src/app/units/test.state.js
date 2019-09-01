@@ -1,4 +1,4 @@
-import constants from './constants';
+import constants from "./constants";
 
 export const alert = {
 	message: "ola ke ase, ke dise amigo, te vienes a por unas mistas ricas? A ver si tengo ñ y Ñ, no vaya a sér que luego ná.",
@@ -9,8 +9,8 @@ export const alert = {
 
 export const gameWindow = {
 	type: constants.GAME_WINDOW.CONFIG.EMPLOYEE,
-	tabs: {},
-	list: {}
+	tabs: [],
+	list: []
 };
 
 export const menu = {

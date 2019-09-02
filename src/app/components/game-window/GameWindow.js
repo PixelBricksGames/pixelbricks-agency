@@ -6,6 +6,20 @@ import { Z_INDEX } from "./../../units/constants";
 
 import "./GameWindow.scss";
 
+const buildTabs = (tabs) => {
+	if(tabs) {
+		return (
+			<ul>
+				{ tabs.map((tab, index) => buildTab(tab, index)) }
+			</ul>
+		);
+	}
+};
+
+const buildTab = (tab, index) => (
+	<li key={index}>{ tab }</li>
+);
+
 const GameWindow = ({type, tabs, list, onClose}) => (
 	<Overlay
 		display={type ? "flex" : "none"}
@@ -15,9 +29,9 @@ const GameWindow = ({type, tabs, list, onClose}) => (
 
 		<div className="game-window" >
 			<button onClick={onClose}></button>
+			{ buildTabs(tabs) }
 			<p>Ola ke ase</p>
 		</div>
-
 	</Overlay>
 );
 

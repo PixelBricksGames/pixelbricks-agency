@@ -11,8 +11,7 @@ export const game = {
 
 export const gameWindow = {
 	type: "",
-    tabs: [],
-    list: []
+    pageList: []
 };
 
 export const menu = {

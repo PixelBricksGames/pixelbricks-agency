@@ -7,8 +7,7 @@ const openAgencyWindow = (state) => {
 	console.log(state);
 	return {
 		type: GAME_WINDOW.CONFIG.AGENCY,
-		tabs: ['uno', 'dos', 'tres'],
-		list: []
+		pageList: []
 	}
 }
 

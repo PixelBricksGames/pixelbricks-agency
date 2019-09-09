@@ -20,7 +20,7 @@ const buildTab = (tab, index) => (
 	<li key={index}>{ tab }</li>
 );
 
-const GameWindow = ({type, tabs, list, onClose}) => (
+const GameWindow = ({type, pageList, onClose}) => (
 	<Overlay
 		display={type ? "flex" : "none"}
 		opacity="00"
@@ -36,9 +36,8 @@ const GameWindow = ({type, tabs, list, onClose}) => (
 );
 
 GameWindow.propTypes = {
-    type: PropTypes.string,
-	tabs: PropTypes.array,
-	list: PropTypes.array,
+	type: PropTypes.string,
+	pageList: PropTypes.object,
 	onClose: PropTypes.func.isRequired
 };
 

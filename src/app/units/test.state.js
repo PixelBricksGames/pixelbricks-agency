@@ -9,11 +9,21 @@ export const alert = {
 
 export const gameWindow = {
 	type: GAME_WINDOW.CONFIG.EMPLOYEE,
-    pageList: [{
-		name: TABS.AGENCY_INFO,
-		tab: TABS.AGENCY_INFO,
-		list: ['uno', 'dos', 'tres']
-	}]
+    pageList: [
+		{
+			tab: TABS.EMPLOYEE_INFO,
+			list: ['uno', 'dos', 'tres']
+		},{
+			tab: TABS.EMPLOYEE_SINGLE,
+			list: ['uno', 'dos', 'tres']
+		},{
+			tab: TABS.EMPLOYEE_DOUBLE,
+			list: ['uno', 'dos', 'tres']
+		},{
+			tab: TABS.EMPLOYEE_FREELANCE,
+			list: ['uno', 'dos', 'tres']
+		}
+	]
 };
 
 export const menu = {

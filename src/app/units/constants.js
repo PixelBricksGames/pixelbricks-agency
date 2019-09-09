@@ -7,7 +7,11 @@ export const GAME_WINDOW = {
 };
 
 export const TABS = {
-	AGENCY_INFO: 'agency-info'
+	AGENCY_INFO: 'agency-info',
+	EMPLOYEE_INFO: 'employee-info',
+	EMPLOYEE_SINGLE: 'employee',
+	EMPLOYEE_DOUBLE: 'dupla',
+	EMPLOYEE_FREELANCE: 'freelance',
 };
 
 export const Z_INDEX = {

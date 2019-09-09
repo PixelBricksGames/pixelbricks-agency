@@ -12,7 +12,10 @@ const buildPages = (pages) => {
 	if(pages) {
 		return (
 			<ul>
-				{ pages.map((page, index) => <GameWindowPage key={index} {...page} />) }
+				{ pages.map((page, index) => {
+					let isActive = (index === 0) ? true : false;
+					return <li key={index}><GameWindowPage index={index} active={isActive} {...page} /></li>
+				}) }
 			</ul>
 		);
 	}
@@ -26,7 +29,7 @@ const GameWindow = ({type, pageList, onClose}) => (
 		noClickable={true}>
 
 		<div className="game-window" >
-			<button onClick={onClose}></button>
+			<button className="game-window__close-button" onClick={onClose}></button>
 			{ buildPages(pageList) }
 		</div>
 	</Overlay>

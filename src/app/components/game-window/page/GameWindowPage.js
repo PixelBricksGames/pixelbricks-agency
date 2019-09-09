@@ -1,5 +1,6 @@
 import React from "react";
 
+import Tab from "./tab/Tab";
 import "./GameWindowPage.scss";
 
 const buildList = (list) => {
@@ -12,13 +13,14 @@ const buildList = (list) => {
 	}
 };
 
-const GameWindowPage = ({ id, name, tab, list }) => {
+const GameWindowPage = ({ index, tab, active, list }) => {
     return (
-        <div className="game-page" key={`${id}`}>
+        <div className="game-page" key={`${index}`}>
 			<section className="game-page__tab">
-				<img src={tab} alt={name} />
+				<Tab name={tab} index={index} active={active} />
 			</section>
 			<section className="game-page__content">
+				Hola que pasa
 				<div className="content__slider">
 				<ul>
 					{ buildList(list) }

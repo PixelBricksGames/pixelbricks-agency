@@ -1,0 +1,64 @@
+$URL_ASSETS: "./../../../../../assets/";
+$URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
+
+@for $i from 0 through 8 {
+	.tab.position-#{$i} {
+		margin-left: 50px * $i;
+	}
+}
+
+.tab {
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	display: block;
+	height: 50px;
+	width: 50px;
+	pointer-events: initial;
+
+	&-agency-info {
+		&--enabled {
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-agency-info-enabled.png");
+		}
+		&--disabled {
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-agency-info-disabled.png");
+		}
+	}
+
+	// EMPLOYEE GAME WINDOW
+	&-employee-info {
+		&--enabled {
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employee-info-enabled.png");
+		}
+		&--disabled {
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employee-info-disabled.png");
+		}
+	}
+
+	&-employee {
+		&--enabled {
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employee-enabled.png");
+		}
+		&--disabled {
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employee-disabled.png");
+		}
+	}
+
+	&-dupla {
+		&--enabled {
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-dupla-enabled.png");
+		}
+		&--disabled {
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-dupla-disabled.png");
+		}
+	}
+
+	&-freelance {
+		&--enabled {
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-freelance-enabled.png");
+		}
+		&--disabled {
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-freelance-disabled.png");
+		}
+	}
+}

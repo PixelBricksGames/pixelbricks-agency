@@ -1,5 +1,17 @@
 .game-page {
-	li {
+
+
+	&__tab {
+	}
+
+	&__content {
+		background-color: #03A9F4;
+		border: 1px solid #01547A;
+		border-left-color: #81D4FA;
+		border-top-width: 0;
+	}
+
+	ul {
 		list-style: none;
 	}
 }

@@ -6,7 +6,9 @@ $URL_ASSETS: "./../../../assets/";
 $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
 .game-window {
-    @extend %image-sharp-edges;
+
+	background-color: transparent;
+
     box-sizing: border-box;
     max-width: 600px;
     min-height: 400px;
@@ -15,11 +17,7 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 	width: 90%;
 	z-index: $Z_INDEX_UI_ON;
 
-    border: 9px solid;
-	border-image: url($URL_ASSETS_IMAGES + "alert/alert-bg.png");
-    border-image-slice: 4 fill;
-
-    button {
+    &__close-button {
         background-color: #00000055;
         background-image: url($URL_ASSETS_IMAGES + "alert/alert-bt.png");
         border: 0;
@@ -38,7 +36,16 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 	}
 	
 	ul {
+		list-style: none;
 		margin: 0;
 		padding: 0;
+		position: relative;
+		li {
+			position: absolute;
+			top: 0;
+			left: 0;
+			pointer-events: none;
+			width: 100%;
+		}
 	}
 }

@@ -6,6 +6,10 @@ export const GAME_WINDOW = {
 	}
 };
 
+export const TABS = {
+	AGENCY_INFO: 'agency-info'
+};
+
 export const Z_INDEX = {
 	UI: 100,
 	UI_ON: 200,

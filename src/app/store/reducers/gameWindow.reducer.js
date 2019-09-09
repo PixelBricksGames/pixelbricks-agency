@@ -1,6 +1,5 @@
 import * as reducerType from "./../../units/reducer.type";
-import * as initState from "./../../units/init.state";
-
+import * as initState from "./../../units/test.state";
 import { GAME_WINDOW } from "./../../units/constants";
 
 const openAgencyWindow = (state) => {

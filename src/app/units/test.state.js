@@ -1,4 +1,4 @@
-import { GAME_WINDOW } from "./constants";
+import { GAME_WINDOW, TABS } from "./constants";
 
 export const alert = {
 	message: "ola ke ase, ke dise amigo, te vienes a por unas mistas ricas? A ver si tengo ñ y Ñ, no vaya a sér que luego ná.",
@@ -9,8 +9,11 @@ export const alert = {
 
 export const gameWindow = {
 	type: GAME_WINDOW.CONFIG.EMPLOYEE,
-	tabs: [],
-	list: []
+    pageList: [{
+		name: TABS.AGENCY_INFO,
+		tab: TABS.AGENCY_INFO,
+		list: ['uno', 'dos', 'tres']
+	}]
 };
 
 export const menu = {

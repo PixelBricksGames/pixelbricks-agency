@@ -4,21 +4,19 @@ import PropTypes from "prop-types";
 import Overlay from "./../overlay/Overlay";
 import { Z_INDEX } from "./../../units/constants";
 
+import GameWindowPage from "./page/GameWindowPage";
+
 import "./GameWindow.scss";
 
-const buildTabs = (tabs) => {
-	if(tabs) {
+const buildPages = (pages) => {
+	if(pages) {
 		return (
 			<ul>
-				{ tabs.map((tab, index) => buildTab(tab, index)) }
+				{ pages.map((page, index) => <GameWindowPage key={index} {...page} />) }
 			</ul>
 		);
 	}
 };
-
-const buildTab = (tab, index) => (
-	<li key={index}>{ tab }</li>
-);
 
 const GameWindow = ({type, pageList, onClose}) => (
 	<Overlay
@@ -29,15 +27,14 @@ const GameWindow = ({type, pageList, onClose}) => (
 
 		<div className="game-window" >
 			<button onClick={onClose}></button>
-			{ buildTabs(tabs) }
-			<p>Ola ke ase</p>
+			{ buildPages(pageList) }
 		</div>
 	</Overlay>
 );
 
 GameWindow.propTypes = {
 	type: PropTypes.string,
-	pageList: PropTypes.object,
+	pageList: PropTypes.array,
 	onClose: PropTypes.func.isRequired
 };
 

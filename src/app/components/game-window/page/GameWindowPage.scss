@@ -1,14 +1,23 @@
 .game-page {
-
+	display: contents;
+	position: relative;
+	display: flex;
+	height: 100%;
+  	flex-direction: column;
 
 	&__tab {
+		position: relative;
+		flex: 0;
+		z-index: 1;
 	}
 
 	&__content {
 		background-color: #03A9F4;
 		border: 1px solid #01547A;
-		border-left-color: #81D4FA;
-		border-top-width: 0;
+		border-color: #81D4FA #01547A #01547A #81D4FA;
+		flex: 1 1 auto;
+		margin-top: -1px;
+		padding: 10px;
 	}
 
 	ul {

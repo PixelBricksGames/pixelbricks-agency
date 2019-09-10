@@ -11,21 +11,24 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
     box-sizing: border-box;
     max-width: 600px;
-    min-height: 400px;
-	position: absolute;
+	height: 60vh;
+	position: relative;
 	pointer-events: auto;
 	width: 90%;
 	z-index: $Z_INDEX_UI_ON;
 
     &__close-button {
-        background-color: #00000055;
+		background-color: #00000055;
         background-image: url($URL_ASSETS_IMAGES + "alert/alert-bt.png");
         border: 0;
+		cursor: pointer;
         display: block;
         height: 27px;
         position: absolute;
+		top: 10px;
+		width: 27px;
+		z-index: 1;
         right: 10px;
-        width: 27px;
         &:hover { background-image: url($URL_ASSETS_IMAGES + "alert/alert-bt-hover.png"); }
         &:active { background-color: #000000BB; }
     }
@@ -40,11 +43,15 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 		margin: 0;
 		padding: 0;
 		position: relative;
+		height: 100%;
+		width: 100%;
+
 		li {
 			position: absolute;
 			top: 0;
 			left: 0;
 			pointer-events: none;
+			height: 100%;
 			width: 100%;
 		}
 	}

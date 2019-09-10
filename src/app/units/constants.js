@@ -2,16 +2,16 @@ export const GAME_WINDOW = {
 	CONFIG: {
 		AGENCY: "RED",
 		PROJECTS: "GREEN",
-		EMPLOYEE: "BLUE"
+		EMPLOYEES: "BLUE"
 	}
 };
 
 export const TABS = {
 	AGENCY_INFO: 'agency-info',
-	EMPLOYEE_INFO: 'employee-info',
-	EMPLOYEE_SINGLE: 'employee',
-	EMPLOYEE_DOUBLE: 'dupla',
-	EMPLOYEE_FREELANCE: 'freelance',
+	EMPLOYEES_INFO: 'employees-info',
+	EMPLOYEES_SINGLE: 'employees-single',
+	EMPLOYEES_DOUBLE: 'employees-double',
+	EMPLOYEES_FREELANCE: 'employees-freelance',
 };
 
 export const Z_INDEX = {

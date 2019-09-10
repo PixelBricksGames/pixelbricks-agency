@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import Menu from "./../components/menu/Menu";
 
-import { openAgencyWindow } from "./../store/actions/gameWindow.action";
+import { openAgencyWindow, openEmployeesWindow } from "./../store/actions/gameWindow.action";
 
 const mapStateToProps = state => ({
 	notifications: state.get("menu").workCompleted
@@ -10,7 +10,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
 	onClickAgency: () => dispatch(openAgencyWindow()),
 	onClickProjects: () => dispatch(openAgencyWindow()),
-	onClickEmployees: () => dispatch(openAgencyWindow()),
+	onClickEmployees: () => dispatch(openEmployeesWindow()),
 	onClickSearcProjects: () => dispatch(openAgencyWindow()),
 	onClickSearchEmployees: () => dispatch(openAgencyWindow()),
 	onClickConfiguration: () => dispatch(openAgencyWindow())

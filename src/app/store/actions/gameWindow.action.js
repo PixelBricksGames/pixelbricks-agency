@@ -11,3 +11,7 @@ export const closeGameWindow = () => ({
 export const openAgencyWindow = () => ({
 	type: "GAME_WINDOW_OPEN_AGENCY"
 });
+
+export const openEmployeesWindow = () => ({
+	type: "GAME_WINDOW_OPEN_EMPLOYEES"
+});

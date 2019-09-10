@@ -25,40 +25,40 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 		}
 	}
 
-	// EMPLOYEE GAME WINDOW
-	&-employee-info {
+	// EMPLOYEES GAME WINDOW
+	&-employees-info {
 		&--enabled {
-			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employee-info-enabled.png");
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employees-info-enabled.png");
 		}
 		&--disabled {
-			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employee-info-disabled.png");
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employees-info-disabled.png");
 		}
 	}
 
-	&-employee {
+	&-employees-single {
 		&--enabled {
-			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employee-enabled.png");
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employees-single-enabled.png");
 		}
 		&--disabled {
-			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employee-disabled.png");
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employees-single-disabled.png");
 		}
 	}
 
-	&-dupla {
+	&-employees-double {
 		&--enabled {
-			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-dupla-enabled.png");
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employees-double-enabled.png");
 		}
 		&--disabled {
-			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-dupla-disabled.png");
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employees-double-disabled.png");
 		}
 	}
 
-	&-freelance {
+	&-employees-freelance {
 		&--enabled {
-			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-freelance-enabled.png");
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employees-freelance-enabled.png");
 		}
 		&--disabled {
-			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-freelance-disabled.png");
+			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-employees-freelance-disabled.png");
 		}
 	}
 }

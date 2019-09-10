@@ -18,26 +18,25 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 	z-index: $Z_INDEX_UI_ON;
 
     &__close-button {
-		background-color: #00000055;
-        background-image: url($URL_ASSETS_IMAGES + "alert/alert-bt.png");
+		background-color: transparent;
+        background-image: url($URL_ASSETS_IMAGES + "game-window/close-bt.png");
         border: 0;
 		cursor: pointer;
         display: block;
-        height: 27px;
+        height: 24px;
         position: absolute;
-		top: 10px;
-		width: 27px;
+		top: 4px;
+		width: 24px;
 		z-index: 1;
-        right: 10px;
-        &:hover { background-image: url($URL_ASSETS_IMAGES + "alert/alert-bt-hover.png"); }
-        &:active { background-color: #000000BB; }
+        right: 4px;
+        &:hover { background-image: url($URL_ASSETS_IMAGES + "game-window/close-bt-hover.png"); }
     }
 
     p {
         font-family: "press_start_2pregular";
         margin: 30px 10px;
 	}
-	
+
 	ul {
 		list-style: none;
 		margin: 0;

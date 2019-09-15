@@ -6,30 +6,42 @@ $URL_ASSETS: "./../../../assets/";
 $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 
 .game-window {
-
-	background-color: transparent;
-
+	background-color: #728892;
+	border: 1px solid #b4bec2;
+	border-bottom-color: #565554;
+	border-right-color: #565554;
     box-sizing: border-box;
     max-width: 600px;
 	height: 60vh;
+	padding: 10px;
 	position: relative;
 	pointer-events: auto;
 	width: 90%;
 	z-index: $Z_INDEX_UI_ON;
 
+	-webkit-box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.5);
+	-moz-box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.5);
+	box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.5);
+
+
     &__close-button {
-		background-color: transparent;
-        background-image: url($URL_ASSETS_IMAGES + "game-window/close-bt.png");
+		background-color: #565554;
+        background-image: url($URL_ASSETS_IMAGES + "game-window/close-button.png");
         border: 0;
 		cursor: pointer;
         display: block;
-        height: 24px;
+        height: 25px;
         position: absolute;
-		top: 4px;
-		width: 24px;
+		top: 10px;
+		width: 25px;
 		z-index: 1;
-        right: 4px;
-        &:hover { background-image: url($URL_ASSETS_IMAGES + "game-window/close-bt-hover.png"); }
+        right: 10px;
+		&:hover {
+			background-image: url($URL_ASSETS_IMAGES + "game-window/close-button-hover.png");
+		}
+		&:active {
+			background-image: url($URL_ASSETS_IMAGES + "game-window/close-button-active.png");
+		}
     }
 
     p {

@@ -8,7 +8,7 @@ export const alert = {
 };
 
 export const gameWindow = {
-	type: GAME_WINDOW.CONFIG.EMPLOYEE,
+	type: GAME_WINDOW.TYPE.EMPLOYEE,
     pageList: [
 		{
 			tab: TABS.EMPLOYEE_INFO,

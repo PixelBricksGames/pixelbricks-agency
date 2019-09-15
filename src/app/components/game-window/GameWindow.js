@@ -8,20 +8,24 @@ import GameWindowPage from "./page/GameWindowPage";
 
 import "./GameWindow.scss";
 
-const buildPages = (pages) => {
+const buildPages = (pages, onClickTab) => {
 	if(pages) {
 		return (
 			<ul>
 				{ pages.map((page, index) => {
-					let isActive = (index === 0) ? true : false;
-					return <li key={index}><GameWindowPage index={index} active={isActive} {...page} /></li>
+					return <li key={index}>
+								<GameWindowPage
+									index={index}
+									onClickTab={() => {onClickTab(index)}}
+									{...page} />
+							</li>
 				}) }
 			</ul>
 		);
 	}
 };
 
-const GameWindow = ({type, pageList, onClose}) => (
+const GameWindow = ({type, pageList, onClickTab, onClose}) => (
 	<Overlay
 		display={type ? "flex" : "none"}
 		opacity="00"
@@ -30,7 +34,7 @@ const GameWindow = ({type, pageList, onClose}) => (
 
 		<div className="game-window" >
 			<button className="game-window__close-button" onClick={onClose}></button>
-			{ buildPages(pageList) }
+			{ buildPages(pageList, onClickTab) }
 		</div>
 	</Overlay>
 );
@@ -38,6 +42,7 @@ const GameWindow = ({type, pageList, onClose}) => (
 GameWindow.propTypes = {
 	type: PropTypes.string,
 	pageList: PropTypes.array,
+	onClickTab: PropTypes.func.isRequired,
 	onClose: PropTypes.func.isRequired
 };
 

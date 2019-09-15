@@ -1,8 +1,8 @@
 export const GAME_WINDOW = {
-	CONFIG: {
-		AGENCY: "RED",
-		PROJECTS: "GREEN",
-		EMPLOYEES: "BLUE"
+	TYPE: {
+		AGENCY: "AGENCY",
+		PROJECTS: "PROJECTS",
+		EMPLOYEES: "EMPLOYEES"
 	}
 };
 

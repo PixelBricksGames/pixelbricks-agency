@@ -13,11 +13,11 @@ const buildList = (list) => {
 	}
 };
 
-const GameWindowPage = ({ index, tab, active, list }) => {
+const GameWindowPage = ({ index, tab, active, list, onClickTab }) => {
     return (
-        <div className="game-page" key={`${index}`}>
+        <div className="game-page" style={{zIndex: active ? 100 : 99}} key={`${index}`}>
 			<section className="game-page__tab">
-				<Tab name={tab} index={index} active={active} />
+				<Tab name={tab} index={index} active={active} onClick={onClickTab} />
 			</section>
 			<section className="game-page__content">
 				Hola que pasa

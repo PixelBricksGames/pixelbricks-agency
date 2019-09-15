@@ -1,11 +1,11 @@
-export const updateGameWindow = gameWindow => ({
-	type: "GAME_WINDOW_UPDATE",
-	gameWindow
-});
-
 export const closeGameWindow = () => ({
 	type: "GAME_WINDOW_CLOSE",
 	gameWindow: {}
+});
+
+export const setActivePage = index => ({
+	type: "GAME_WINDOW_SET_ACTIVE_PAGE",
+	index
 });
 
 export const openAgencyWindow = () => ({

@@ -16,6 +16,9 @@ $URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
 	width: 50px;
 	pointer-events: initial;
 
+	&:active { outline: none; border: none; }
+	&:focus { outline:0; }
+
 	&-agency-info {
 		&--enabled {
 			background-image: url($URL_ASSETS_IMAGES + "game-window/tab-agency-info-enabled.png");

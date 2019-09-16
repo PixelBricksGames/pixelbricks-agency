@@ -18,9 +18,16 @@ const gameWindow = (state = initState.gameWindow, action) => {
 };
 
 const setActivePage = (state, activeIndex) => {
-	const newGameWindow = { ...state };
-	newGameWindow.pageList.map((page, index) => {
-	 	page.active = (index === activeIndex) ? true : false;
+	const newGameWindow = {
+		type: state.type,
+		pageList: []
+	};
+	newGameWindow.pageList = state.pageList.map((page, index) => {
+		return {
+			tab: page.tab,
+			list: page.list,
+			active: (activeIndex === index) ? true : false
+		};
 	});
 	return newGameWindow;
 }

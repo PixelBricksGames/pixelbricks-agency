@@ -6,6 +6,13 @@ export const GAME_WINDOW = {
 	}
 };
 
+export const GAME_UNITS = {
+	ACCOUNT: 'account',
+	ARTIST: 'artist',
+	COPY: 'copy',
+	PROGRAMMER: 'programmer',
+};
+
 export const TABS = {
 	AGENCY_INFO: 'agency-info',
 	EMPLOYEES_INFO: 'employees-info',

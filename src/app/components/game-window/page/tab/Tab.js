@@ -14,7 +14,7 @@ Tab.propTypes = {
 	name: PropTypes.string.isRequired,
 	index: PropTypes.number.isRequired,
 	active: PropTypes.bool,
-	onClick: PropTypes.func,
+	onClick: PropTypes.func
 };
 
 export default Tab;

@@ -1,6 +1,6 @@
 import * as reducerType from "./../../units/reducer.type";
 import * as initState from "./../../units/init.state";
-import { GAME_WINDOW, TABS } from "./../../units/constants";
+import { GAME_WINDOW, GAME_UNITS, TABS } from "./../../units/constants";
 
 const gameWindow = (state = initState.gameWindow, action) => {
 	switch (action.type) {
@@ -24,8 +24,7 @@ const setActivePage = (state, activeIndex) => {
 	};
 	newGameWindow.pageList = state.pageList.map((page, index) => {
 		return {
-			tab: page.tab,
-			list: page.list,
+			...page,
 			active: (activeIndex === index) ? true : false
 		};
 	});
@@ -49,10 +48,15 @@ const openEmployeesWindow = (state) => {
 		pageList: [
 			{
 				tab: TABS.EMPLOYEES_INFO,
-				list: ['uno', 'dos', 'tres'],
+				info: [
+					["key1", "value1"],
+					["key2", "value2"],
+					["key3", "value3"],
+				],
 				active: true
 			},{
 				tab: TABS.EMPLOYEES_SINGLE,
+				filter: [GAME_UNITS.ACCOUNT, GAME_UNITS.ARTIST, GAME_UNITS.COPY, GAME_UNITS.PROGRAMMER],
 				list: ['uno', 'dos', 'tres'],
 				active: false
 			},{

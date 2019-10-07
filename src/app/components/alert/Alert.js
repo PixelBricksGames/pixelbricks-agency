@@ -16,7 +16,6 @@ const Alert = ({message, onClose}) => (
 			<button onClick={onClose}></button>
 			<p>{message}</p>
 		</div>
-
 	</Overlay>
 );
 

@@ -4,21 +4,31 @@ import PropTypes from "prop-types";
 import Overlay from "./../overlay/Overlay";
 import { Z_INDEX } from "./../../units/constants";
 
-import GameWindowPage from "./page/GameWindowPage";
+import PageInfo from "./page-info/PageInfo";
+import PageList from "./page-list/PageList";
 
 import "./GameWindow.scss";
 
 const buildPages = (pages, onClickTab) => {
 	if(pages) {
 		return (
-			<ul>
+			<ul className="page-list">
 				{ pages.map((page, index) => {
-					return <li key={index}>
-								<GameWindowPage
-									index={index}
-									onClickTab={() => {onClickTab(index)}}
-									{...page} />
-							</li>
+					if(page.info) {
+						return <li className="page-list__page" key={index}>
+							<PageInfo
+								index={index}
+								onClickTab={() => {onClickTab(index)}}
+								{...page} />
+						</li>
+					} else if(page.list) {
+						return <li  className="page-list__page" key={index}>
+							<PageList
+								index={index}
+								onClickTab={() => {onClickTab(index)}}
+								{...page} />
+						</li>
+					}
 				}) }
 			</ul>
 		);
@@ -28,7 +38,7 @@ const buildPages = (pages, onClickTab) => {
 const GameWindow = ({type, pageList, onClickTab, onClose}) => (
 	<Overlay
 		display={type ? "flex" : "none"}
-		opacity="00"
+		opacity="0"
 		depth={Z_INDEX.UI_ON}
 		noClickable={true}>
 

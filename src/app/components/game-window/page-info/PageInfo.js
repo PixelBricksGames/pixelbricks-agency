@@ -11,7 +11,11 @@ const buildInfo = (list) => {
 			<ul>
 				<li>
 					{ list.map((item, index) => {
-						return <div key={`list-${index}`}>{ item }</div>
+						return <div className="item" key={`list-${index}`}>
+							<span className="item__key">{ item [0] }</span>
+							<span className="item__separator"></span>
+							<span className="item__value">{ item [1] }</span>
+						</div>
 					}) }
 				</li>
 			</ul>
@@ -22,7 +26,6 @@ const buildInfo = (list) => {
 const PageInfo = ({ index, tab, active, onClickTab, info }) => {
     return (
 		<Page index={index} tab={tab} active={active} onClickTab={onClickTab} >
-			Soy Info
 			{ buildInfo(info) }
 		</Page>
     );

@@ -4,9 +4,16 @@ export const alert = {
 };
 
 export const game = {
-	agency: {},
+	agency: {
+		name: "MacLane & McLeod"
+	},
     projects: [],
-    employees: []
+	employees: [],
+	config: {
+		autosave: true,
+		music: true,
+		sfx: true
+	}
 };
 
 export const gameWindow = {

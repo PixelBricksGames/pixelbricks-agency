@@ -1,0 +1,32 @@
+@import "./../../../../assets/fonts/pressstart2p/stylesheet.css";
+
+$page-info-color-text: #000000;
+$page-info-size-font: 12px;
+
+.page {
+	.item {
+		display: flex;
+		justify-content: space-between;
+		margin: $page-info-size-font/2 0;
+		color: $page-info-color-text;
+		font-size: $page-info-size-font;
+	
+		&__key {
+			font-family: "press_start_2pregular";
+			margin-right: $page-info-size-font / 2;
+		}
+
+		&__separator {
+			border-bottom: 2px #000000;
+			border-bottom-style: dashed;
+			margin-bottom: 4px;
+			flex: 1 1;
+		}
+	
+		&__value {
+			font-family: "press_start_2pregular";
+			margin-left: $page-info-size-font / 2;
+		}
+	}
+}
+

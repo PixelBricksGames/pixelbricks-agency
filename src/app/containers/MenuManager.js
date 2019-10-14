@@ -4,16 +4,18 @@ import Menu from "./../components/menu/Menu";
 import { openAgencyWindow, openEmployeesWindow } from "./../store/actions/gameWindow.action";
 
 const mapStateToProps = state => ({
-	notifications: state.get("menu").workCompleted
+	menu: state.get("menu"),
+	game: state.get("game"),
+	status: state.get("status")
 });
 
 const mapDispatchToProps = dispatch => ({
-	onClickAgency: () => dispatch(openAgencyWindow()),
-	onClickProjects: () => dispatch(openAgencyWindow()),
-	onClickEmployees: () => dispatch(openEmployeesWindow()),
-	onClickSearcProjects: () => dispatch(openAgencyWindow()),
+	onClickAgency: (agency, status) => dispatch(openAgencyWindow(agency, status)),
+	onClickProjects: (projects, status) => dispatch(openProjectsWindow(projects, status)),
+	onClickEmployees: (employees, status) => dispatch(openEmployeesWindow(employees, status)),
+	onClickSearchProjects: () => dispatch(openAgencyWindow()),
 	onClickSearchEmployees: () => dispatch(openAgencyWindow()),
-	onClickConfiguration: () => dispatch(openAgencyWindow())
+	onClickConfiguration: (config) => dispatch(openConfigurationWindow(config))
 });
 
 export default connect(

@@ -1,11 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import MenuButton from "./button/MenuButton";
 
 import "./Menu.scss";
 
-const Menu = ({ notifications,
+const Menu = ({ menu,
+				game,
+				status,
 				onClickAgency,
 				onClickProjects,
 				onClickEmployees,
@@ -17,21 +18,17 @@ const Menu = ({ notifications,
     return (
         <section className="menu">
 			<section className="menu--left">
-				<MenuButton id="agency" click={onClickAgency} />
-				<MenuButton id="projects" click={onClickProjects} notifications={notifications} />
-				<MenuButton id="employees" click={onClickEmployees} />
-				<MenuButton id="search-projects" click={onClickSearcProjects} />
-				<MenuButton id="search-employees" click={onClickSearchEmployees} />
+				<MenuButton id="agency" click={() => { onClickAgency(game.agency, status) }} />
+				<MenuButton id="projects" click={() => { onClickProjects(game.projects, status) }} notifications={menu.workCompleted} />
+				<MenuButton id="employees" click={() => { onClickEmployees(game.employees, status) }} />
+				<MenuButton id="search-projects" click={() => { onClickSearcProjects() }} />
+				<MenuButton id="search-employees" click={() => { onClickSearchEmployees() }} />
 			</section>
 			<section className="menu--right">
-				<MenuButton id="configuration" click={onClickConfiguration} />
+				<MenuButton id="configuration" click={() => { onClickConfiguration(game.config) }} />
 			</section>
 		</section>
     );
 }
-
-Menu.propTypes = {
-    notifications: PropTypes.number.isRequired
-};
 
 export default Menu;

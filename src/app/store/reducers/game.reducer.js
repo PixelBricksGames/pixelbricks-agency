@@ -1,13 +1,13 @@
 import * as reducerType from "./../../units/reducer.type";
 import * as initState from "./../../units/init.state";
 
-const status = (state = initState.status, action) => {
+const game = (state = initState.game, action) => {
 	switch (action.type) {
-		case reducerType.STATUS.UPDATE:
-			return action.status;
+		case reducerType.GAME.AGENCY.CHANGE_NAME:
+			return action.game;
 		default:
 			return state;
 	}
 };
 
-export default status;
+export default game;

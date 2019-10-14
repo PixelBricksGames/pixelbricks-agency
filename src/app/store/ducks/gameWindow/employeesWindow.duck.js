@@ -1,5 +1,5 @@
-import { GAME_WINDOW, GAME_UNITS, TABS } from "../../../units/constants";
 import * as reducerType from "../../../units/reducer.type";
+import { GAME_WINDOW, GAME_UNITS, TABS } from "../../../units/constants";
 
 export const openEmployeesWindow = (employees, status) => ({
 	type: reducerType.GAME_WINDOW.OPEN_EMPLOYEES,

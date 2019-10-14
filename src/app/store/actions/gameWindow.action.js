@@ -3,11 +3,6 @@ export const closeGameWindow = () => ({
 	gameWindow: {}
 });
 
-export const setActivePage = index => ({
-	type: "GAME_WINDOW_SET_ACTIVE_PAGE",
-	index
-});
-
 export const openProjectsWindow = (projects, status) => ({
 	type: "GAME_WINDOW_OPEN_PROJECTS",
 	projects,

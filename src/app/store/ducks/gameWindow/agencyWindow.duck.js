@@ -1,5 +1,5 @@
-import { GAME_WINDOW, TABS } from "../../../units/constants";
 import * as reducerType from "../../../units/reducer.type";
+import { GAME_WINDOW, TABS } from "../../../units/constants";
 
 export const openAgencyWindow = (agency, status) => ({
 	type: reducerType.GAME_WINDOW.OPEN_AGENCY,

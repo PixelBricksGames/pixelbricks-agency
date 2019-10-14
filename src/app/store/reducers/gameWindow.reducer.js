@@ -3,13 +3,14 @@ import * as initState from "../../units/init.state";
 
 import { agencyWindow } from "../ducks/gameWindow/agencyWindow.duck";
 import { employeesWindow } from "../ducks/gameWindow/employeesWindow.duck";
+import { activePage } from "../ducks/gameWindow/setActivePage.duck";
 
 const gameWindow = (state = initState.gameWindow, action) => {
 	switch (action.type) {
 		case reducerType.GAME_WINDOW.CLOSE:
 			return action.gameWindow;
 		case reducerType.GAME_WINDOW.SET_ACTIVE_PAGE:
-			return setActivePage(state, action.index);
+			return activePage(state, action.index);
 		case reducerType.GAME_WINDOW.OPEN_AGENCY:
 			return agencyWindow(action.agency, action.status);
 		case reducerType.GAME_WINDOW.OPEN_PROJECTS:
@@ -20,19 +21,5 @@ const gameWindow = (state = initState.gameWindow, action) => {
 			return state;
 	}
 };
-
-export const setActivePage = (state, activeIndex) => {
-	const newGameWindow = {
-		type: state.type,
-		pageList: []
-	};
-	newGameWindow.pageList = state.pageList.map((page, index) => {
-		return {
-			...page,
-			active: (activeIndex === index) ? true : false
-		};
-	});
-	return newGameWindow;
-}
 
 export default gameWindow;

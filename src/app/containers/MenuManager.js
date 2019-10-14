@@ -1,7 +1,8 @@
 import { connect } from "react-redux";
 import Menu from "./../components/menu/Menu";
 
-import { openAgencyWindow, openEmployeesWindow } from "./../store/actions/gameWindow.action";
+import { openAgencyWindow } from "../store/ducks/gameWindow/agencyWindow.duck";
+import { openEmployeesWindow } from "../store/ducks/gameWindow/employeesWindow.duck";
 
 const mapStateToProps = state => ({
 	menu: state.get("menu"),

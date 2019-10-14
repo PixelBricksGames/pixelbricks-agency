@@ -1,4 +1,11 @@
-import { GAME_WINDOW, GAME_UNITS, TABS } from "./../../units/constants";
+import { GAME_WINDOW, TABS } from "../../../units/constants";
+import * as reducerType from "../../../units/reducer.type";
+
+export const openAgencyWindow = (agency, status) => ({
+	type: reducerType.GAME_WINDOW.OPEN_AGENCY,
+	agency,
+	status
+});
 
 export const agencyWindow = (agency, status) => {
 	console.log("agency", agency);

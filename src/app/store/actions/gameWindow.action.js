@@ -8,21 +8,9 @@ export const setActivePage = index => ({
 	index
 });
 
-export const openAgencyWindow = (agency, status) => ({
-	type: "GAME_WINDOW_OPEN_AGENCY",
-	agency,
-	status
-});
-
 export const openProjectsWindow = (projects, status) => ({
 	type: "GAME_WINDOW_OPEN_PROJECTS",
 	projects,
-	status
-});
-
-export const openEmployeesWindow = (employees, status) => ({
-	type: "GAME_WINDOW_OPEN_EMPLOYEES",
-	employees,
 	status
 });
 

@@ -1,8 +1,8 @@
-import * as reducerType from "./../../units/reducer.type";
-import * as initState from "./../../units/init.state";
+import * as reducerType from "../../units/reducer.type";
+import * as initState from "../../units/init.state";
 
-import { agencyWindow } from "./../game-windows/agency.window";
-import { employeesWindow } from "./../game-windows/employees.window";
+import { agencyWindow } from "../ducks/gameWindow/agencyWindow.duck";
+import { employeesWindow } from "../ducks/gameWindow/employeesWindow.duck";
 
 const gameWindow = (state = initState.gameWindow, action) => {
 	switch (action.type) {
@@ -21,7 +21,7 @@ const gameWindow = (state = initState.gameWindow, action) => {
 	}
 };
 
-const setActivePage = (state, activeIndex) => {
+export const setActivePage = (state, activeIndex) => {
 	const newGameWindow = {
 		type: state.type,
 		pageList: []

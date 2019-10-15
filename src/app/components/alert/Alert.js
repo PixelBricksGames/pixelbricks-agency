@@ -6,8 +6,16 @@ import { Z_INDEX } from "./../../units/constants";
 
 import "./Alert.scss";
 
-const Alert = ({message, onClose}) => (
-	<Overlay
+const Alert = ({message, callback, onCloseAlert}) => {
+
+	const onClose = () => {
+		if(callback){
+			callback();
+		}
+		onCloseAlert();
+	}
+
+	return <Overlay
 		display={message ? "flex" : "none"}
 		opacity="99"
 		depth={Z_INDEX.UI_OVER}>
@@ -16,12 +24,13 @@ const Alert = ({message, onClose}) => (
 			<button onClick={onClose}></button>
 			<p>{message}</p>
 		</div>
-	</Overlay>
-);
+	</Overlay>;
+};
 
 Alert.propTypes = {
-    message: PropTypes.string,
-    onClose: PropTypes.func.isRequired
+	message: PropTypes.string,
+	callback: PropTypes.func,
+    onCloseAlert: PropTypes.func.isRequired
 };
 
 export default Alert;

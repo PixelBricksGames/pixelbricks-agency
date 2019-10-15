@@ -3,6 +3,12 @@ import Menu from "./../components/menu/Menu";
 
 import { openAgencyWindow } from "../store/ducks/gameWindow/agencyWindow.duck";
 import { openEmployeesWindow } from "../store/ducks/gameWindow/employeesWindow.duck";
+import { openAlert } from "../store/actions/alert.action";
+
+const testAlert = {
+	message: "texto magico",
+	callback: () => { console.log('ola karacola') }
+};
 
 const mapStateToProps = state => ({
 	menu: state.get("menu"),
@@ -14,8 +20,8 @@ const mapDispatchToProps = dispatch => ({
 	onClickAgency: (agency, status) => dispatch(openAgencyWindow(agency, status)),
 	onClickProjects: (projects, status) => dispatch(openProjectsWindow(projects, status)),
 	onClickEmployees: (employees, status) => dispatch(openEmployeesWindow(employees, status)),
-	onClickSearchProjects: () => dispatch(openAgencyWindow()),
-	onClickSearchEmployees: () => dispatch(openAgencyWindow()),
+	onClickSearchProjects: () => dispatch(openAlert(testAlert)),
+	onClickSearchEmployees: () => dispatch(openAlert(testAlert)),
 	onClickConfiguration: (config) => dispatch(openConfigurationWindow(config))
 });
 

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import MenuButton from "./button/MenuButton";
 
@@ -10,7 +11,7 @@ const Menu = ({ menu,
 				onClickAgency,
 				onClickProjects,
 				onClickEmployees,
-				onClickSearcProjects,
+				onClickSearchProjects,
 				onClickSearchEmployees,
 				onClickConfiguration
 			}) => {
@@ -21,7 +22,7 @@ const Menu = ({ menu,
 				<MenuButton id="agency" click={() => { onClickAgency(game.agency, status) }} />
 				<MenuButton id="projects" click={() => { onClickProjects(game.projects, status) }} notifications={menu.workCompleted} />
 				<MenuButton id="employees" click={() => { onClickEmployees(game.employees, status) }} />
-				<MenuButton id="search-projects" click={() => { onClickSearcProjects() }} />
+				<MenuButton id="search-projects" click={() => { onClickSearchProjects() }} />
 				<MenuButton id="search-employees" click={() => { onClickSearchEmployees() }} />
 			</section>
 			<section className="menu--right">
@@ -30,5 +31,17 @@ const Menu = ({ menu,
 		</section>
     );
 }
+
+Menu.propTypes = {
+	menu: PropTypes.object,
+	game: PropTypes.object,
+	status: PropTypes.object,
+	onClickAgency: PropTypes.func.isRequired,
+	onClickProjects: PropTypes.func.isRequired,
+	onClickEmployees: PropTypes.func.isRequired,
+	onClickSearchProjects: PropTypes.func.isRequired,
+	onClickSearchEmployees: PropTypes.func.isRequired,
+	onClickConfiguration: PropTypes.func.isRequired
+};
 
 export default Menu;

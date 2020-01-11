@@ -11,10 +11,16 @@ const buildInfo = (list) => {
 			<ul>
 				<li>
 					{ list.map((item, index) => {
+						let editableItem;
+						if(item[2]) {
+							editableItem = <span className="item__value">X</span>
+						}
+
 						return <div className="item" key={`list-${index}`}>
 							<span className="item__key">{ item [0] }</span>
 							<span className="item__separator"></span>
 							<span className="item__value">{ item [1] }</span>
+							{ editableItem }
 						</div>
 					}) }
 				</li>

@@ -15,8 +15,8 @@ export const agencyWindow = (agency, status) => {
 		pageList: [{
 			tab: TABS.AGENCY_INFO,
 			info: [
-				["Nombre", agency.name, true],
-				["Dinero", status.money, true],
+				["Nombre", agency.name, true, ()=>{console.log('edit String')}],
+				["Dinero", status.money, true, ()=>{console.log('edit Number')}],
 				["Karma", status.karma],
 				["Reputación", status.reputation],
 				["Ranking", "0"],

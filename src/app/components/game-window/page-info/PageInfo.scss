@@ -1,7 +1,10 @@
 @import "./../../../../assets/fonts/pressstart2p/stylesheet.css";
 
+$URL_ASSETS: "./../../../../assets/";
+$URL_ASSETS_IMAGES: $URL_ASSETS + "images/";
+
 $page-info-color-text: #000000;
-$page-info-size-font: 12px;
+$page-info-size-font: 14px;
 
 .page {
 	.item {
@@ -26,6 +29,46 @@ $page-info-size-font: 12px;
 		&__value {
 			font-family: "press_start_2pregular";
 			margin-left: $page-info-size-font / 2;
+		}
+
+		&__editable {
+			font-family: "press_start_2pregular";
+			margin-left: $page-info-size-font / 2;
+			display: block;
+
+			button {
+				border: 0;
+				margin: 0;
+				padding: 0;
+				background-color: transparent;
+				background-size: contain;
+				display: inline-block;
+				pointer-events: all;
+				cursor: pointer;
+
+				&.item__editable {
+					&--plus {
+						background-image: url($URL_ASSETS_IMAGES + "game-window/pageinfo-bt-plus.png");
+						margin-left: 1px;
+						height: 16px;
+						width: 16px;
+					}
+
+					&--minus {
+						background-image: url($URL_ASSETS_IMAGES + "game-window/pageinfo-bt-minus.png");
+						height: 16px;
+						width: 16px;
+					}
+
+					&--edit {
+						background-image: url($URL_ASSETS_IMAGES + "game-window/pageinfo-bt-edit.png");
+						height: 16px;
+						width: 33px;
+					}
+				}
+
+			}
+
 		}
 	}
 }
